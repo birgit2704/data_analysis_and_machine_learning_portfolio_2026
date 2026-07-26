@@ -51,7 +51,7 @@ export default function App() {
             className="flex items-center gap-2 font-bold text-lg text-indigo-400 hover:text-indigo-300 transition-colors"
           >
             <Code2 className="w-6 h-6" />
-            <span>DevPortfolio</span>
+            <span>DataAnalyticsPortfolio</span>
           </a>
 
           {/* Desktop Nav */}
@@ -123,7 +123,7 @@ export default function App() {
 
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
             Building intelligent apps & <br />
-            <span className="bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">
               data-driven solutions.
             </span>
           </h1>

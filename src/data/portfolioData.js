@@ -2,7 +2,7 @@
 
 export const portfolioData = {
   personalInfo: {
-    name: "Software & Data Professional",
+    name: "Birgit Bartenschlager",
     title: "Software Engineer & Data Analyst",
     location: "Germany",
     bio: "Passionate about bridging full-stack software development and data analytics. Specialized in building scalable web applications, robust data pipelines, and machine learning solutions.",
