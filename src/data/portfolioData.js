@@ -6,6 +6,7 @@ export const portfolioData = {
       about: "About",
       projects: "Projects",
       skills: "Skills",
+      certificates: "Certificates",
       contact: "Contact",
       touch: "Get in Touch",
     },
@@ -91,6 +92,26 @@ export const portfolioData = {
         "Interested in collaborating, discussing data analyst/engineering roles, or reviewing code? Reach out directly via email or LinkedIn.",
       button: "Say Hello",
     },
+    certificatesHeader: {
+      title: "Certificates & Credentials",
+      subtitle: "Official certifications and completed professional training.",
+    },
+    certificates: [
+      {
+        id: 1,
+        title: "Professional Data Analyst / Engineering Certification",
+        issuer: "Issuing Organization / Platform",
+        date: "2026",
+        credentialUrl: "https://example.com/verify/123",
+      },
+      {
+        id: 2,
+        title: "Full-Stack Web Development & Modern React",
+        issuer: "Issuing Organization / Platform",
+        date: "2025",
+        credentialUrl: "https://example.com/verify/456",
+      },
+    ],
   },
 
   de: {
@@ -98,6 +119,7 @@ export const portfolioData = {
       about: "Über mich",
       projects: "Projekte",
       skills: "Fähigkeiten",
+      certificates: "Zertifikate",
       contact: "Kontakt",
       touch: "Kontaktieren",
     },
@@ -183,5 +205,25 @@ export const portfolioData = {
         "Interesse an einer Zusammenarbeit, Austausch über Data Analyst/Engineering Positionen oder Code-Reviews? Schreib mir direkt per E-Mail oder LinkedIn.",
       button: "Nachricht senden",
     },
+    certificatesHeader: {
+      title: "Zertifikate & Nachweise",
+      subtitle: "Offizielle Zertifizierungen und absolvierte Weiterbildungen.",
+    },
+    certificates: [
+      {
+        id: 1,
+        title: "Professional Data Analyst / Engineering Zertifikat",
+        issuer: "Ausstellende Organisation / Plattform",
+        date: "2026",
+        credentialUrl: "https://example.com/verify/123",
+      },
+      {
+        id: 2,
+        title: "Full-Stack Webentwicklung & Modernes React",
+        issuer: "Ausstellende Organisation / Plattform",
+        date: "2025",
+        credentialUrl: "https://example.com/verify/456",
+      },
+    ],
   },
 };

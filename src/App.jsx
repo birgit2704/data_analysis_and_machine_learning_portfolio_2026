@@ -12,6 +12,7 @@ import {
   Menu,
   X,
   Globe,
+  Award,
 } from "lucide-react";
 
 // Custom SVG components for Brand Logos
@@ -44,6 +45,8 @@ export default function App() {
     skillsHeader,
     projects,
     projectsHeader,
+    certificates,
+    certificatesHeader,
     contact,
   } = content;
 
@@ -52,6 +55,7 @@ export default function App() {
     { name: nav.projects, href: "#projects" },
     { name: nav.skills, href: "#skills" },
     { name: nav.contact, href: "#contact" },
+    { name: nav.certificates, href: "#certificates" },
   ];
 
   return (
@@ -343,6 +347,50 @@ export default function App() {
                 </div>
               );
             })}
+          </div>
+        </section>
+
+        {/* Certificates Section */}
+        <section
+          id="certificates"
+          className="py-20 border-b border-slate-800/60"
+        >
+          <div className="flex flex-col gap-2 mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-white">
+              {certificatesHeader.title}
+            </h2>
+            <p className="text-slate-400">{certificatesHeader.subtitle}</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {certificates.map((cert) => (
+              <a
+                key={cert.id}
+                href={cert.credentialUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-900/80 transition-all group duration-200"
+              >
+                <div className="flex items-start gap-4">
+                  <span className="p-2.5 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400 group-hover:text-indigo-300 transition-colors">
+                    <Award className="w-6 h-6" />
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
+                      {cert.title}
+                    </h3>
+                    <p className="text-sm text-slate-400 mt-0.5">
+                      {cert.issuer} •{" "}
+                      <span className="text-slate-500">{cert.date}</span>
+                    </p>
+                  </div>
+                </div>
+
+                <span className="p-2 text-slate-500 group-hover:text-white transition-colors">
+                  <ExternalLink className="w-5 h-5" />
+                </span>
+              </a>
+            ))}
           </div>
         </section>
 
