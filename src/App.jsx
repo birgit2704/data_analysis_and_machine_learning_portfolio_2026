@@ -114,61 +114,92 @@ export default function App() {
         {/* Hero / About Section */}
         <section
           id="about"
-          className="py-20 md:py-28 flex flex-col items-start gap-6 border-b border-slate-800/60"
+          className="py-20 md:py-28 border-b border-slate-800/60"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-300 text-xs font-semibold tracking-wide">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Available for new projects & roles</span>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            {/* TEXT CONTENT (Left column on desktop, 1st on mobile) */}
+            <div className="md:col-span-7 flex flex-col items-start gap-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-300 text-xs font-semibold tracking-wide">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Available for new projects & roles</span>
+              </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            Building intelligent apps & <br />
-            <span className="bg-linear-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">
-              data-driven solutions.
-            </span>
-          </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                Building intelligent apps & <br />
+                <span className="bg-linear-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">
+                  data-driven solutions.
+                </span>
+              </h1>
 
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
-            {personalInfo.bio}
-          </p>
+              <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
+                {personalInfo.bio}
+              </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-4">
-            <a
-              href="#projects"
-              className="px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-all flex items-center gap-2 shadow-lg shadow-indigo-600/25"
-            >
-              View Projects
-              <ChevronRight className="w-4 h-4" />
-            </a>
-            <div className="flex items-center gap-3 ml-2">
-              <a
-                href={personalInfo.github}
-                target="_blank"
-                rel="noreferrer"
-                className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all"
-                aria-label="GitHub Profile"
-              >
-                <GithubIcon className="w-5 h-5" />
-              </a>
-              <a
-                href={personalInfo.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all"
-                aria-label="LinkedIn Profile"
-              >
-                <LinkedinIcon className="w-5 h-5" />
-              </a>
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
+              <div className="flex flex-wrap items-center gap-4 pt-4">
+                <a
+                  href="#projects"
+                  className="px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-all flex items-center gap-2 shadow-lg shadow-indigo-600/25"
+                >
+                  View Projects
+                  <ChevronRight className="w-4 h-4" />
+                </a>
+                <div className="flex items-center gap-3 ml-2">
+                  <a
+                    href={personalInfo.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all"
+                    aria-label="GitHub Profile"
+                  >
+                    <GithubIcon className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={personalInfo.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all"
+                    aria-label="LinkedIn Profile"
+                  >
+                    <LinkedinIcon className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={`mailto:${personalInfo.email}`}
+                    className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all"
+                    aria-label="Email"
+                  >
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* IMAGE/placeholder CONTENT (Right column on desktop, 2nd on mobile) */}
+            <div className="md:col-span-5 flex justify-center md:justify-end order-first md:order-last">
+              <div className="relative group">
+                {/* Glow effect background */}
+                <div className="absolute -inset-1 bg-linear-to-r from-indigo-500 to-emerald-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+
+                {/* The Image (or Placeholder) Container */}
+                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-900 border-4 border-slate-800 overflow-hidden shadow-2xl flex items-center justify-center">
+                  {/* OPTION 1: Placeholder Icon (Use this until your photo is ready) */}
+                  {/*<UserCircle
+                    className="w-32 h-32 text-slate-700"
+                    strokeWidth={1}
+                  />*/}
+
+                  {/* OPTION 2: Actual Image (Uncomment this and comment out OPTION 1 when your photo is ready) */}
+
+                  <img
+                    src="/Birgit.jpg" // <--- Change this path to your file in the public folder
+                    alt={personalInfo.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
+        {/* --- END HERO SECTION UPDATE --- */}
 
         {/* Featured Projects */}
         <section id="projects" className="py-20 border-b border-slate-800/60">
