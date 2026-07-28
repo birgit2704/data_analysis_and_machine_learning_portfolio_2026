@@ -359,7 +359,28 @@ export default function App() {
             <h2 className="text-3xl font-bold tracking-tight text-white">
               {certificatesHeader.title}
             </h2>
-            <p className="text-slate-400">{certificatesHeader.subtitle}</p>
+            <div className="flex gap-6">
+              <p className="text-slate-400 pt-2">
+                {certificatesHeader.subtitle}
+              </p>
+
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-indigo-400 hover:text-white hover:border-slate-700 transition-all"
+              >
+                <LinkedinIcon className="w-5 h-5" />
+              </a>
+              <a
+                href={personalInfo.credly}
+                target="_blank"
+                rel="noreferrer"
+                className="text-indigo-400 pt-2 hover:text-white"
+              >
+                Credly
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -372,9 +393,18 @@ export default function App() {
                 className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-900/80 transition-all group duration-200"
               >
                 <div className="flex items-start gap-4">
-                  <span className="p-2.5 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400 group-hover:text-indigo-300 transition-colors">
-                    <Award className="w-6 h-6" />
-                  </span>
+                  {cert.image ? (
+                    <img
+                      src={cert.image}
+                      alt={cert.name}
+                      className="w-22 h-20 object-contain"
+                    />
+                  ) : (
+                    <span className="p-2.5 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400 group-hover:text-indigo-300 transition-colors">
+                      <Award className="w-6 h-6" />
+                    </span>
+                  )}
+
                   <div>
                     <h3 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
                       {cert.title}

@@ -20,6 +20,8 @@ export const portfolioData = {
       email: "birgit.bartenschlager@web.de",
       github: "https://github.com/birgit2704",
       linkedin: "https://www.linkedin.com/in/birgit-bartenschlager",
+      credly:
+        "https://www.credly.com/users/birgit-bartenschlager/badges/credly",
     },
     skillsHeader: {
       title: "Technical Skills",
@@ -112,7 +114,8 @@ export const portfolioData = {
     },
     certificatesHeader: {
       title: "Certificates & Credentials",
-      subtitle: "A selection of certificates (full list on my LinkedIn Page)",
+      subtitle:
+        "A selection of certificates (full list on  LinkedIn, badges on Credly)",
     },
     certificates: [
       {
@@ -122,6 +125,7 @@ export const portfolioData = {
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/6LNGFMYZ9YEW",
+        image: "public/badge_google.png",
       },
       {
         id: 2,
@@ -130,6 +134,7 @@ export const portfolioData = {
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/IDKYVP40ECZ5",
+        image: "public/badge_meta.png",
       },
       {
         id: 3,
@@ -138,6 +143,7 @@ export const portfolioData = {
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/TU5A3241P3OS",
+        image: "public/badge_google_AI.png",
       },
       {
         id: 4,
@@ -193,6 +199,8 @@ export const portfolioData = {
       email: "birgit.bartenschlager@web.de",
       github: "https://github.com/birgit2704",
       linkedin: "https://www.linkedin.com/in/birgit-bartenschlager",
+      credly:
+        "https://www.credly.com/users/birgit-bartenschlager/badges/credly",
     },
     skillsHeader: {
       title: "Technische Fähigkeiten",
@@ -286,7 +294,7 @@ export const portfolioData = {
     certificatesHeader: {
       title: "Zertifikate & Nachweise",
       subtitle:
-        "Eine Auswahl meiner Zertifikate (komplette Liste auf meiner LinkedIn-Seite)",
+        "Eine Auswahl meiner Zertifikate (komplette Liste auf LinkedIn, Badges auf Credly)",
     },
     certificates: [
       {
@@ -296,6 +304,7 @@ export const portfolioData = {
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/6LNGFMYZ9YEW",
+        image: "public/badge_google.png",
       },
       {
         id: 2,
@@ -304,6 +313,7 @@ export const portfolioData = {
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/IDKYVP40ECZ5",
+        image: "public/badge_meta.png",
       },
       {
         id: 3,
@@ -312,6 +322,7 @@ export const portfolioData = {
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/TU5A3241P3OS",
+        image: "public/badge_google_AI.png",
       },
       {
         id: 4,
