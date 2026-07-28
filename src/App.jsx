@@ -258,7 +258,7 @@ export default function App() {
                         rel="noreferrer"
                         className="text-slate-400 hover:text-white p-1"
                       >
-                        <GithubIcon className="w-4 h-4" />
+                        <GithubIcon className="w-6 h-6" />
                       </a>
                       <a
                         href={project.liveUrl}
@@ -266,7 +266,7 @@ export default function App() {
                         rel="noreferrer"
                         className="text-slate-400 hover:text-white p-1"
                       >
-                        <ExternalLink className="w-4 h-4" />
+                        <ExternalLink className="w-5 h-5" />
                       </a>
                     </div>
                   </div>
@@ -275,11 +275,11 @@ export default function App() {
                     {project.title}
                   </h3>
 
-                  <p className="text-sm text-slate-400 mb-4 leading-relaxed">
+                  <p className="text-base text-slate-400 mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
-                  <ul className="space-y-1.5 mb-6 text-xs text-slate-300">
+                  <ul className="space-y-1.5 mb-6 text-base text-slate-300">
                     {project.outcomes.map((outcome, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-indigo-400 font-bold">•</span>
@@ -293,7 +293,7 @@ export default function App() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-800/80 text-slate-300 border border-slate-700/50"
+                      className="px-2.5 py-1 rounded-md text-sm  bg-slate-800/80 text-slate-300 border border-slate-700/50"
                     >
                       {tag}
                     </span>
