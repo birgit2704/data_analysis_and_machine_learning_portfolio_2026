@@ -68,7 +68,7 @@ export default function App() {
             className="flex items-center gap-2 font-bold text-lg text-indigo-400 hover:text-indigo-300 transition-colors"
           >
             <Code2 className="w-6 h-6" />
-            <span>DevPortfolio</span>
+            <span>ML_Portfolio</span>
           </a>
 
           {/* Desktop Navigation & Language Switcher */}
