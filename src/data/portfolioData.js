@@ -117,17 +117,59 @@ export const portfolioData = {
     certificates: [
       {
         id: 1,
-        title: "Professional Data Analyst / Engineering Certification",
-        issuer: "Issuing Organization / Platform",
+        title: "Google Advanced Data Analytics Certificate",
+        issuer: "Google / Coursera",
         date: "2026",
-        credentialUrl: "https://example.com/verify/123",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/6LNGFMYZ9YEW",
       },
       {
         id: 2,
-        title: "Full-Stack Web Development & Modern React",
-        issuer: "Issuing Organization / Platform",
+        title: "Meta Data Analyst Certificate",
+        issuer: "Meta / Coursera",
+        date: "2026",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/IDKYVP40ECZ5",
+      },
+      {
+        id: 3,
+        title: "Google AI Professional Certificate",
+        issuer: "Meta / Coursera",
+        date: "2026",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/TU5A3241P3OS",
+      },
+      {
+        id: 4,
+        title: "Mathematics for Data Science & Machine Learning",
+        issuer: "Meta / Coursera",
+        date: "2026",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/I9Y87MGSSDYV",
+      },
+      {
+        id: 5,
+        title: "Local LLMs via Ollama & LM Studio",
+        issuer: "Udemy Business Leadership Academy",
         date: "2025",
-        credentialUrl: "https://example.com/verify/456",
+        credentialUrl:
+          "https://www.udemy.com/certificate/UC-02fc736c-e6ee-414f-bca5-5dcba689064e/",
+      },
+      {
+        id: 6,
+        title: "LLM Finetuning Fundamentals",
+        issuer: "Udemy Business Leadership Academy",
+        date: "2025",
+        credentialUrl:
+          "https://www.udemy.com/certificate/UC-31ae0fb3-dacb-4b5a-8edf-9df43fa433ee/",
+      },
+      {
+        id: 7,
+        title: "The complete SQL Bootcamp: From Zero to Hero",
+        issuer: "Udemy Business Leadership Academy",
+        date: "2024",
+        credentialUrl:
+          "https://www.udemy.com/certificate/UC-9e89492e-373f-4ae1-91bd-5bc0b9a28aea/",
       },
     ],
   },
@@ -249,17 +291,59 @@ export const portfolioData = {
     certificates: [
       {
         id: 1,
-        title: "Professional Data Analyst / Engineering Zertifikat",
-        issuer: "Ausstellende Organisation / Plattform",
+        title: "Google Advanced Data Analytics Certificate",
+        issuer: "Google / Coursera",
         date: "2026",
-        credentialUrl: "https://example.com/verify/123",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/6LNGFMYZ9YEW",
       },
       {
         id: 2,
-        title: "Full-Stack Webentwicklung & Modernes React",
-        issuer: "Ausstellende Organisation / Plattform",
+        title: "Meta Data Analyst Certificate",
+        issuer: "Meta / Coursera",
+        date: "2026",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/IDKYVP40ECZ5",
+      },
+      {
+        id: 3,
+        title: "Google AI Professional Certificate",
+        issuer: "Meta / Coursera",
+        date: "2026",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/TU5A3241P3OS",
+      },
+      {
+        id: 4,
+        title: "Mathematics for Data Science & Machine Learning",
+        issuer: "Meta / Coursera",
+        date: "2026",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/I9Y87MGSSDYV",
+      },
+      {
+        id: 5,
+        title: "Local LLMs via Ollama & LM Studio",
+        issuer: "Udemy Business Leadership Academy",
         date: "2025",
-        credentialUrl: "https://example.com/verify/456",
+        credentialUrl:
+          "https://www.udemy.com/certificate/UC-02fc736c-e6ee-414f-bca5-5dcba689064e/",
+      },
+      {
+        id: 6,
+        title: "LLM Finetuning Fundamentals",
+        issuer: "Udemy Business Leadership Academy",
+        date: "2025",
+        credentialUrl:
+          "https://www.udemy.com/certificate/UC-31ae0fb3-dacb-4b5a-8edf-9df43fa433ee/",
+      },
+      {
+        id: 7,
+        title: "The complete SQL Bootcamp: From Zero to Hero",
+        issuer: "Udemy Business Leadership Academy",
+        date: "2024",
+        credentialUrl:
+          "https://www.udemy.com/certificate/UC-9e89492e-373f-4ae1-91bd-5bc0b9a28aea/",
       },
     ],
   },
