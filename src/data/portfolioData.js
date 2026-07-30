@@ -68,15 +68,17 @@ export const portfolioData = {
     projects: [
       {
         id: 1,
-        title: "Why do we lose subscriptions?",
-        description: "A user churn evaluation",
-        tags: ["Python", "Pandas", "Seaborn", "Tableau"],
+        title: "Subscriber Churn Analysis & Risk Prediction",
+        description:
+          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
         outcomes: [
-          "Interactive dashboard (Development and Causes)",
-          "Machine Learning model predictiong future subscriptions",
-          "Stakeholder documentation of all project steps from project plan to final presentation",
+          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
+          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
+          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+          "Tailored stakeholder documentation covering the full lifecycle from project plan to executive summary",
         ],
-        githubUrl: "https://github.com",
+        githubUrl: "https://github.com/birgit2704/churn_prediciton",
         liveUrl: "https://example.com",
       },
       {
@@ -247,15 +249,17 @@ export const portfolioData = {
     projects: [
       {
         id: 1,
-        title: "Warum laufen uns die Abonnenten davon?",
-        description: "Eine 'User-Churn' Auswertung",
-        tags: ["Python", "Pandas", "Seaborn", "Tableau"],
+        title: "Warum laufen uns die Abonnenten davon und was kostet uns das?",
+        description:
+          "End-to-End User Churn Analysis & Risk Prediction für einen Video-Streaming-Anbieter.",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
         outcomes: [
-          "Interaktives Dashboard (Entwicklung und Ursachen)",
-          "Ein Machine-Learning Modell für zukünftige Entwicklung der Abonnenten.",
-          "Stakeholder Dokumentation aller Schritte vom Projektplan bis zur Präsentation der Ergebnisse",
+          "Interaktives Tableau-Dashboard zur Visualisierung von Churn-Treibern und Kundensegmenten",
+          "Prädiktives Machine-Learning-Modell zur frühzeitigen Identifikation kündigungsgefährdeter Abonnenten",
+          "Quantifizierung des drohenden MRR-Verlusts und Priorisierung von High-Value-Kunden",
+          "Zielgruppengerechte Stakeholder-Dokumentation vom Projektplan bis zur Management-Präsentation",
         ],
-        githubUrl: "https://github.com",
+        githubUrl: "https://github.com/birgit2704/churn_prediciton",
         liveUrl: "https://example.com",
       },
       {
