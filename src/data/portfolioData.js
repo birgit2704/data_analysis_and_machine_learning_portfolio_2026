@@ -78,7 +78,8 @@ export const portfolioData = {
           "Financial loss assessment (MRR impact) and prioritized high-value retention list",
           "Tailored stakeholder documentation covering the full lifecycle from project plan to executive summary",
         ],
-        githubUrl: "https://github.com/birgit2704/churn_prediciton",
+        githubUrl:
+          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
       },
       {
@@ -91,7 +92,8 @@ export const portfolioData = {
           "Interactive dashboard (development and relations)",
           "Stakeholder documentation of all project steps from project plan to final presentation",
         ],
-        githubUrl: "https://github.com",
+        githubUrl:
+          "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
         liveUrl: "https://example.com",
       },
       {
@@ -104,7 +106,17 @@ export const portfolioData = {
           "Machine Learning tool to predict the DAX",
           "Stakeholder documentation of all project steps from project plan to final presentation",
         ],
-        githubUrl: "https://github.com",
+        githubUrl:
+          "https://github.com/birgit2704/dax_time_series_analysis_2026",
+        liveUrl: "https://example.com",
+      },
+      {
+        id: 4,
+        title: "SQL practice app for developers, analysts and students",
+        description: "Test and train your SQL skills",
+        tags: ["SQLite", "JavaScript", "Tailwind CSS"],
+        outcomes: [],
+        githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://example.com",
       },
     ],
@@ -259,7 +271,8 @@ export const portfolioData = {
           "Quantifizierung des drohenden MRR-Verlusts und Priorisierung von High-Value-Kunden",
           "Zielgruppengerechte Stakeholder-Dokumentation vom Projektplan bis zur Management-Präsentation",
         ],
-        githubUrl: "https://github.com/birgit2704/churn_prediciton",
+        githubUrl:
+          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
       },
       {
@@ -272,7 +285,8 @@ export const portfolioData = {
           "Interaktives Dashboard (Entwicklung und Zusammenhänge)",
           "Stakeholder Dokumentation aller Schritte vom Projektplan bis zur Präsentation der Ergebnisse",
         ],
-        githubUrl: "https://github.com",
+        githubUrl:
+          "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
         liveUrl: "https://example.com",
       },
       {
@@ -285,7 +299,17 @@ export const portfolioData = {
           "Ein Machine-Learning Modell für zukünftige Entwicklung.",
           "Stakeholder Dokumentation aller Schritte vom Projektplan bis zur Präsentation der Ergebnisse",
         ],
-        githubUrl: "https://github.com",
+        githubUrl:
+          "https://github.com/birgit2704/dax_time_series_analysis_2026",
+        liveUrl: "https://example.com",
+      },
+      {
+        id: 4,
+        title: "SQL Übungsapp für Entwickler, Analysten und Studenten",
+        description: "Testen und trainieren Sie Ihre SQL Kenntnisse",
+        tags: ["SQLite", "JavaScript", "Tailwind CSS"],
+        outcomes: [],
+        githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://example.com",
       },
     ],
