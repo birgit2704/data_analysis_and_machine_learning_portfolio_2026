@@ -96,20 +96,20 @@ export const portfolioData = {
           "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
         liveUrl: "https://example.com",
       },
-      {
-        id: 3,
-        title: "Will the DAX fall or rise?",
-        description: "A a time series analysis tool to predict the DAX",
-        tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
-        outcomes: [
-          "Interactive dashboard (development and relations)",
-          "Machine Learning tool to predict the DAX",
-          "Stakeholder documentation of all project steps from project plan to final presentation",
-        ],
-        githubUrl:
-          "https://github.com/birgit2704/dax_time_series_analysis_2026",
-        liveUrl: "https://example.com",
-      },
+      // {
+      //   id: 3,
+      //   title: "Will the DAX fall or rise?",
+      //   description: "A a time series analysis tool to predict the DAX",
+      //   tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
+      //   outcomes: [
+      //     "Interactive dashboard (development and relations)",
+      //     "Machine Learning tool to predict the DAX",
+      //     "Stakeholder documentation of all project steps from project plan to final presentation",
+      //   ],
+      //   githubUrl:
+      //     "https://github.com/birgit2704/dax_time_series_analysis_2026",
+      //   liveUrl: "https://example.com",
+      // },
       {
         id: 4,
         title: "Which is the best country to start a rail travel business?",
@@ -314,20 +314,20 @@ export const portfolioData = {
           "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
         liveUrl: "https://example.com",
       },
-      {
-        id: 3,
-        title: "Wird der DAX steigen oder fallen?",
-        description: "Ein Time-Series Analysetool zur Entwicklung des DAX",
-        tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
-        outcomes: [
-          "Interaktives Dashboard (Entwicklung und Ursachen)",
-          "Ein Machine-Learning Modell für zukünftige Entwicklung.",
-          "Stakeholder Dokumentation aller Schritte vom Projektplan bis zur Präsentation der Ergebnisse",
-        ],
-        githubUrl:
-          "https://github.com/birgit2704/dax_time_series_analysis_2026",
-        liveUrl: "https://example.com",
-      },
+      // {
+      //   id: 3,
+      //   title: "Wird der DAX steigen oder fallen?",
+      //   description: "Ein Time-Series Analysetool zur Entwicklung des DAX",
+      //   tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
+      //   outcomes: [
+      //     "Interaktives Dashboard (Entwicklung und Ursachen)",
+      //     "Ein Machine-Learning Modell für zukünftige Entwicklung.",
+      //     "Stakeholder Dokumentation aller Schritte vom Projektplan bis zur Präsentation der Ergebnisse",
+      //   ],
+      //   githubUrl:
+      //     "https://github.com/birgit2704/dax_time_series_analysis_2026",
+      //   liveUrl: "https://example.com",
+      // },
       {
         id: 4,
         title:
