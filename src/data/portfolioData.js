@@ -112,6 +112,19 @@ export const portfolioData = {
       },
       {
         id: 4,
+        title: "Which is the best country to start a rail travel business?",
+        description: "A BI Analysis Project",
+        tags: ["Tableau"],
+        outcomes: [
+          "A story explaining the selection process",
+          "Interactive dashboard",
+        ],
+        githubUrl: "https://github.com/birgit2704/railway_travel_business",
+        liveUrl:
+          "https://public.tableau.com/app/profile/birgit.bartenschlager/viz/railway_travel_business/Story1",
+      },
+      {
+        id: 5,
         title: "SQL practice app for developers, analysts and students",
         description: "Test and train your SQL skills",
         tags: ["SQLite", "Google AI Studio"],
@@ -317,6 +330,20 @@ export const portfolioData = {
       },
       {
         id: 4,
+        title:
+          "Welches is das beste Land für ein Unternehmen, das Eisenbahnfahrten vermarktet?",
+        description: "Ein BI-Analyse Projekt",
+        tags: ["Tableau"],
+        outcomes: [
+          "Die Beschreibung des Auswahlverfahrens mit Tableau",
+          "Ein interaktives Dashboard",
+        ],
+        githubUrl: "https://github.com/birgit2704/railway_travel_business",
+        liveUrl:
+          "https://public.tableau.com/app/profile/birgit.bartenschlager/viz/railway_travel_business/Story1",
+      },
+      {
+        id: 5,
         title: "SQL Übungsapp für Entwickler, Analysten und Studenten",
         description: "Testen und trainieren Sie Ihre SQL Kenntnisse",
         tags: ["SQLite", "Google AI Studio"],
