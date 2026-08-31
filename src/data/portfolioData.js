@@ -48,7 +48,7 @@ export const portfolioData = {
       "Data & Analytics": [
         "Relational databases (MySQL, Postgres)",
         "Data visualizations (Matplotlib, Seaborn, Tableau)",
-        "Machine Learning Basics (ScikitLearn)",
+        "Machine Learning (ScikitLearn, TensorFlow)",
         "EDA (Numpy, Pandas)",
         "Dashboards (Tableau, PowerBI, React)",
       ],
@@ -165,6 +165,14 @@ export const portfolioData = {
       },
       {
         id: 4,
+        title: "Tableau Business Intelligence Analyst",
+        issuer: "Tableau Learning / Coursera",
+        date: "2026",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/51T8YE0CM6A8",
+      },
+      {
+        id: 5,
         title: "Mathematics for Data Science & Machine Learning",
         issuer: "Meta / Coursera",
         date: "2026",
@@ -172,7 +180,7 @@ export const portfolioData = {
           "https://www.coursera.org/account/accomplishments/specialization/I9Y87MGSSDYV",
       },
       {
-        id: 5,
+        id: 6,
         title: "Local LLMs via Ollama & LM Studio",
         issuer: "Udemy Business Leadership Academy",
         date: "2025",
@@ -180,7 +188,7 @@ export const portfolioData = {
           "https://www.udemy.com/certificate/UC-02fc736c-e6ee-414f-bca5-5dcba689064e/",
       },
       {
-        id: 6,
+        id: 7,
         title: "LLM Finetuning Fundamentals",
         issuer: "Udemy Business Leadership Academy",
         date: "2025",
@@ -188,7 +196,7 @@ export const portfolioData = {
           "https://www.udemy.com/certificate/UC-31ae0fb3-dacb-4b5a-8edf-9df43fa433ee/",
       },
       {
-        id: 7,
+        id: 8,
         title: "The complete SQL Bootcamp: From Zero to Hero",
         issuer: "Udemy Business Leadership Academy",
         date: "2024",
@@ -245,7 +253,7 @@ export const portfolioData = {
       "Daten & Analytik": [
         "Relationale Datenbanken (MySQL, Postgres)",
         "Datenvisualisierung (Matplotlib, Seaborn, Tableau)",
-        "Machine Learning Grundlagen (ScikitLearn)",
+        "Machine Learning (ScikitLearn, TensorFlow)",
         "Explorative Datenanalyse (Numpy, Pandas)",
         "Dashboards (Tableau, PowerBI, React)",
       ],
@@ -351,6 +359,7 @@ export const portfolioData = {
           "https://www.coursera.org/account/accomplishments/specialization/IDKYVP40ECZ5",
         image: "/badge_meta.png",
       },
+
       {
         id: 3,
         title: "Google AI Professional Certificate",
@@ -362,6 +371,14 @@ export const portfolioData = {
       },
       {
         id: 4,
+        title: "Tableau Business Intelligence Analyst",
+        issuer: "Tableau Learning / Coursera",
+        date: "2026",
+        credentialUrl:
+          "https://www.coursera.org/account/accomplishments/specialization/51T8YE0CM6A8",
+      },
+      {
+        id: 5,
         title: "Mathematics for Data Science & Machine Learning",
         issuer: "Meta / Coursera",
         date: "2026",
@@ -369,7 +386,7 @@ export const portfolioData = {
           "https://www.coursera.org/account/accomplishments/specialization/I9Y87MGSSDYV",
       },
       {
-        id: 5,
+        id: 6,
         title: "Local LLMs via Ollama & LM Studio",
         issuer: "Udemy Business Leadership Academy",
         date: "2025",
@@ -377,7 +394,7 @@ export const portfolioData = {
           "https://www.udemy.com/certificate/UC-02fc736c-e6ee-414f-bca5-5dcba689064e/",
       },
       {
-        id: 6,
+        id: 7,
         title: "LLM Finetuning Fundamentals",
         issuer: "Udemy Business Leadership Academy",
         date: "2025",
@@ -385,7 +402,7 @@ export const portfolioData = {
           "https://www.udemy.com/certificate/UC-31ae0fb3-dacb-4b5a-8edf-9df43fa433ee/",
       },
       {
-        id: 7,
+        id: 8,
         title: "The complete SQL Bootcamp: From Zero to Hero",
         issuer: "Udemy Business Leadership Academy",
         date: "2024",
