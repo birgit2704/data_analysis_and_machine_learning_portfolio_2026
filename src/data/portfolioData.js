@@ -112,16 +112,17 @@ export const portfolioData = {
       // },
       {
         id: 4,
-        title: "Which is the best country to start a rail travel business?",
-        description: "A BI Analysis Project",
+        title: "Which is the best country to start a railway travel business?",
+        description:
+          "A BI Analysis Project for a startup that is looking for the best country to open up a railway travel business.",
         tags: ["Tableau"],
         outcomes: [
-          "A story explaining the selection process",
-          "Interactive dashboard",
+          "The selection process explained as a sequence of visualizations",
+          "An interactive dashboard for the management to try out different data combinations themselves",
         ],
         githubUrl: "https://github.com/birgit2704/railway_travel_business",
         liveUrl:
-          "https://public.tableau.com/app/profile/birgit.bartenschlager/viz/railway_travel_business/Story1",
+          "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
       },
       {
         id: 5,
@@ -330,17 +331,17 @@ export const portfolioData = {
       // },
       {
         id: 4,
-        title:
-          "Welches is das beste Land für ein Unternehmen, das Eisenbahnfahrten vermarktet?",
-        description: "Ein BI-Analyse Projekt",
+        title: "Was ist das beste Land für die Vermarktung von Bahnreisen?",
+        description:
+          "Ein BI-Analyse Projekt für ein Startup, das das beste Land sucht, um dort Bahnreisen anzubieten.",
         tags: ["Tableau"],
         outcomes: [
-          "Die Beschreibung des Auswahlverfahrens mit Tableau",
-          "Ein interaktives Dashboard",
+          "Die Beschreibung des Auswahlverfahrens in einer Abfolge von Visualisierungen",
+          "Ein interaktives Dashboard für das Management, um verschiedene alternative Datenkonstallationen anzuzeigen",
         ],
         githubUrl: "https://github.com/birgit2704/railway_travel_business",
         liveUrl:
-          "https://public.tableau.com/app/profile/birgit.bartenschlager/viz/railway_travel_business/Story1",
+          "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
       },
       {
         id: 5,
