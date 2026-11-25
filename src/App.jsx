@@ -95,7 +95,7 @@ export default function App() {
             <div className="flex items-center gap-4 border-l border-slate-800 pl-6">
               {/* Language Switcher Toggle */}
               <button
-                onClick={() => setLang(lang === "en" ? "de" : "en")}
+                onClick={handleLanguageToggle}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300 hover:text-white hover:border-slate-700 transition-all"
                 title="Switch Language"
               >
@@ -115,8 +115,8 @@ export default function App() {
           {/* Mobile Actions */}
           <div className="flex items-center gap-3 md:hidden">
             <button
-              // onClick={() => setLang(lang === "en" ? "de" : "en")}
-              onClick={handleLanguageToggle}
+              onClick={() => setLang(lang === "en" ? "de" : "en")}
+              // onClick={handleLanguageToggle}
               className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300"
             >
               <Globe className="w-3.5 h-3.5 text-indigo-400" />
@@ -164,9 +164,9 @@ export default function App() {
         {/* Hero / About Section */}
         <section
           id="about"
-          className="py-20 md:py-28 border-b border-slate-800/60"
+          className="min-h-[calc(100vh-4rem)] flex items-center py-12 border-b border-slate-800/60"
         >
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-7 flex flex-col items-start gap-6">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-300 text-xs font-semibold tracking-wide">
                 <Sparkles className="w-3.5 h-3.5" />
@@ -180,11 +180,25 @@ export default function App() {
                 onComplete={() => setIsTypingDone(true)}
               />
 
-              <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
+              {/* Bio Paragraph: fades and slides up as the photo finishes spinning (delay-1700) */}
+              <p
+                className={`text-lg text-slate-400 max-w-2xl leading-relaxed ${
+                  isTypingDone
+                    ? "opacity-100 translate-y-0 transition-all duration-700 delay-700 ease-out"
+                    : "opacity-0 translate-y-4"
+                }`}
+              >
                 {personalInfo.bio}
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 pt-4">
+              {/* CTA & Social Buttons: follows slightly behind the bio (delay-2000) */}
+              <div
+                className={`flex flex-wrap items-center gap-4 pt-4 ${
+                  isTypingDone
+                    ? "opacity-100 translate-y-0 transition-all duration-700 delay-[900ms] ease-out"
+                    : "opacity-0 translate-y-4"
+                }`}
+              >
                 <a
                   href="#projects"
                   className="px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-all flex items-center gap-2 shadow-lg shadow-indigo-600/25"
@@ -489,7 +503,8 @@ function TypewriterHeading({ headline, subline, speed = 45, onComplete }) {
     }, speed);
 
     return () => clearInterval(interval);
-  }, [totalLength, speed, onComplete]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [totalLength, speed]);
 
   const typedHeadline = headline.slice(0, Math.min(charCount, headline.length));
   const typedSubline =
