@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@keyframes spin-grow {
+  0% {
+    transform: scale(0) rotate(-720deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-spin-grow {
+  /* cubic-bezier(0.22, 1, 0.36, 1) gives a crisp deceleration as it locks into place */
+  animation: spin-grow 1.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

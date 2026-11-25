@@ -1,5 +1,5 @@
 // src/App.jsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { portfolioData } from "./data/portfolioData";
 import {
   Mail,
@@ -58,6 +58,13 @@ export default function App() {
     { name: nav.certificates, href: "#certificates" },
   ];
 
+  const [isTypingDone, setIsTypingDone] = useState(false);
+
+  const handleLanguageToggle = () => {
+    setIsTypingDone(false); // Reset photo animation if you switch between EN/DE
+    setLang(lang === "en" ? "de" : "en");
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500 selection:text-white">
       {/* Navigation Header */}
@@ -108,7 +115,8 @@ export default function App() {
           {/* Mobile Actions */}
           <div className="flex items-center gap-3 md:hidden">
             <button
-              onClick={() => setLang(lang === "en" ? "de" : "en")}
+              // onClick={() => setLang(lang === "en" ? "de" : "en")}
+              onClick={handleLanguageToggle}
               className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300"
             >
               <Globe className="w-3.5 h-3.5 text-indigo-400" />
@@ -165,12 +173,12 @@ export default function App() {
                 <span>{personalInfo.badge}</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                {personalInfo.heroHeadline} <br />
-                <span className="bg-linear-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">
-                  {personalInfo.heroSubline}
-                </span>
-              </h1>
+              <TypewriterHeading
+                key={`${personalInfo.heroHeadline}-${personalInfo.heroSubline}`}
+                headline={personalInfo.heroHeadline || ""}
+                subline={personalInfo.heroSubline || ""}
+                onComplete={() => setIsTypingDone(true)}
+              />
 
               <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
                 {personalInfo.bio}
@@ -213,15 +221,15 @@ export default function App() {
 
             {/* Profile Image Column */}
             <div className="md:col-span-5 flex justify-center md:justify-end order-first md:order-last">
-              <div className="relative group">
+              <div
+                className={`relative group ${
+                  isTypingDone ? "animate-spin-grow" : "scale-0 opacity-0"
+                }`}
+              >
                 <div className="absolute -inset-1 bg-linear-to-r from-indigo-500 to-emerald-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
                 <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-900 border-4 border-slate-800 overflow-hidden shadow-2xl flex items-center justify-center">
-                  {/*<UserCircle
-                    className="w-32 h-32 text-slate-700"
-                    strokeWidth={1}
-                  />*/}
                   <img
-                    src="/Birgit.jpg" // <--- Change this path to your file in the public folder
+                    src="/Birgit.jpg"
                     alt={personalInfo.name}
                     className="w-full h-full object-cover"
                   />
@@ -453,5 +461,67 @@ export default function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function TypewriterHeading({ headline, subline, speed = 45, onComplete }) {
+  const [charCount, setCharCount] = useState(0);
+  const totalLength = headline.length + subline.length;
+
+  useEffect(() => {
+    if (totalLength === 0) {
+      onComplete?.();
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setCharCount((prev) => {
+        if (prev >= totalLength) {
+          clearInterval(interval);
+          return prev;
+        }
+        const next = prev + 1;
+        if (next === totalLength) {
+          onComplete?.();
+        }
+        return next;
+      });
+    }, speed);
+
+    return () => clearInterval(interval);
+  }, [totalLength, speed, onComplete]);
+
+  const typedHeadline = headline.slice(0, Math.min(charCount, headline.length));
+  const typedSubline =
+    charCount > headline.length
+      ? subline.slice(0, charCount - headline.length)
+      : "";
+
+  const isTypingHeadline = charCount < headline.length;
+  const isDone = charCount >= totalLength;
+
+  return (
+    <h1 className="relative text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+      {/* Invisible spacer */}
+      <span aria-hidden="true" className="invisible select-none block">
+        {headline} <br />
+        <span>{subline}</span>
+      </span>
+
+      {/* Visible typing layer */}
+      <span className="absolute inset-0">
+        {typedHeadline}
+        {!isDone && isTypingHeadline && (
+          <span className="inline-block w-[3px] h-[0.9em] bg-indigo-400 ml-1 align-middle animate-pulse" />
+        )}
+        <br />
+        <span className="bg-linear-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">
+          {typedSubline}
+        </span>
+        {!isDone && !isTypingHeadline && (
+          <span className="inline-block w-[3px] h-[0.9em] bg-emerald-400 ml-1 align-middle animate-pulse" />
+        )}
+      </span>
+    </h1>
   );
 }

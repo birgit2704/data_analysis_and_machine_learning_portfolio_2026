@@ -14,8 +14,8 @@ export const portfolioData = {
       name: "Birgit Bartenschlager",
       title: "Software Developer & Data Analyst",
       badge: "Available for new projects & roles",
-      heroHeadline: "Building intelligent apps &",
-      heroSubline: "data-driven solutions.",
+      heroHeadline: "Intelligent apps &",
+      heroSubline: "data-driven\n solutions",
       bio: "Data Analyst with a cross-functional background in application development, Finance, Controlling, HR, and Sales. I use Python, machine learning, and statistical methods to answer business-critical questions and automate analytical workflows.",
       email: "birgit.bartenschlager@web.de",
       github: "https://github.com/birgit2704",
@@ -36,6 +36,7 @@ export const portfolioData = {
         "Python",
         "FastAPI",
         "Django",
+        "Streamlit",
         "Tailwind CSS",
         "HTML5/CSS3",
         "REST APIs",
@@ -67,7 +68,7 @@ export const portfolioData = {
     },
     projects: [
       {
-        id: 1,
+        id: 10,
         title: "Subscriber Churn Analysis & Risk Prediction",
         description:
           "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
@@ -76,28 +77,73 @@ export const portfolioData = {
           "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
           "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
           "Financial loss assessment (MRR impact) and prioritized high-value retention list",
-          "Tailored stakeholder documentation covering the full lifecycle from project plan to executive summary",
         ],
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
       },
       {
-        id: 2,
-        title: "What's the problem with school education in Germany?",
-        description: "A contemplation from different angles.",
-        tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
+        id: 11,
+        title: "Demand Forecasting App",
+        description:
+          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
         outcomes: [
-          "Joining of data from different sources",
-          "Interactive dashboard (development and relations)",
-          "Stakeholder documentation of all project steps from project plan to final presentation",
+          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
+          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
+          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+        ],
+        githubUrl:
+          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
+        liveUrl: "https://example.com",
+      },
+      {
+        id: 12,
+        title: "Customer Segmentation",
+        description:
+          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
+        outcomes: [
+          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
+          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
+          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+        ],
+        githubUrl:
+          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
+        liveUrl: "https://example.com",
+      },
+      {
+        id: 13,
+        title: "AI Data Analysis App",
+        description:
+          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
+        outcomes: [
+          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
+          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
+          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+        ],
+        githubUrl:
+          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
+        liveUrl: "https://example.com",
+      },
+      {
+        id: 20,
+        title: "The State of School Education in Germany",
+        description:
+          "Data analysis of student performance trends: International OECD benchmarks and regional federal disparities in an interactive dashboard.",
+        tags: ["Tableau", "Data Analysis", "ETL", "Benchmarking"],
+        outcomes: [
+          "Integration and cleaning of primary data from OECD PISA and national IQB studies",
+          "Interactive visualization of performance trends across federal states and school tracks",
         ],
         githubUrl:
           "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
-        liveUrl: "https://example.com",
+        liveUrl:
+          "https://public.tableau.com/views/Schulbildung_in_Deutschland/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
       },
       // {
-      //   id: 3,
+      //   id: 30,
       //   title: "Will the DAX fall or rise?",
       //   description: "A a time series analysis tool to predict the DAX",
       //   tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
@@ -111,28 +157,34 @@ export const portfolioData = {
       //   liveUrl: "https://example.com",
       // },
       {
-        id: 4,
-        title: "Which is the best country to start a railway travel business?",
+        id: 40,
+        title: "Market Entry Strategy: Optimal Target Markets for Rail Travel",
         description:
-          "A BI Analysis Project for a startup that is looking for the best country to open up a railway travel business.",
-        tags: ["Tableau"],
+          "BI-driven market evaluation for a travel startup to identify the most attractive European country for launching rail tourism offerings.",
+        tags: [
+          "Tableau",
+          "Business Intelligence",
+          "Market Analysis",
+          "Data Storytelling",
+        ],
         outcomes: [
-          "The selection process explained as a sequence of visualizations",
-          "An interactive dashboard for the management to try out different data combinations themselves",
+          "Structured data storytelling guiding stakeholders through the multi-stage country selection funnel",
+          "Interactive executive dashboard enabling dynamic scenario analysis and custom metric weighting",
         ],
         githubUrl: "https://github.com/birgit2704/railway_travel_business",
         liveUrl:
           "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
       },
       {
-        id: 5,
-        title: "SQL practice app for developers, analysts and students",
-        description: "Test and train your SQL skills",
-        tags: ["SQLite", "Google AI Studio"],
+        id: 50,
+        title: "SQL Practice App for Developers & Analysts",
+        description:
+          "Interactive SQL training tool with realistic scenarios, live query execution, and assistance.",
+        tags: ["SQLite", "Google AI Studio", "EdTech"],
         outcomes: [
-          "36 challenges, grouped for beginners, intermediate and advanced",
-          "Hints when user is stuck",
-          "Data base table previews for easy orientation",
+          "Structured 3-tier curriculum featuring 36 hands-on query challenges",
+          "Hint generation to support problem-solving without spoiling answers",
+          "Instant database schema and table previews for rapid context switching",
         ],
         githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://bb-sql-practice-app.netlify.app/",
@@ -255,6 +307,7 @@ export const portfolioData = {
         "Python",
         "FastAPI",
         "Django",
+        "Streamlit",
         "Tailwind CSS",
         "HTML5/CSS3",
         "REST APIs",
@@ -286,7 +339,7 @@ export const portfolioData = {
     },
     projects: [
       {
-        id: 1,
+        id: 10,
         title: "Warum laufen uns die Abonnenten davon und was kostet uns das?",
         description:
           "End-to-End User Churn Analysis & Risk Prediction für einen Video-Streaming-Anbieter.",
@@ -295,28 +348,73 @@ export const portfolioData = {
           "Interaktives Tableau-Dashboard zur Visualisierung von Churn-Treibern und Kundensegmenten",
           "Prädiktives Machine-Learning-Modell zur frühzeitigen Identifikation kündigungsgefährdeter Abonnenten",
           "Quantifizierung des drohenden MRR-Verlusts und Priorisierung von High-Value-Kunden",
-          "Zielgruppengerechte Stakeholder-Dokumentation vom Projektplan bis zur Management-Präsentation",
         ],
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
       },
       {
-        id: 2,
-        title: "Was ist mit der Schulbildung in Deutschland los?",
-        description: "Betrachtung verschiedener Fragen zur Schulbildung",
-        tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
+        id: 11,
+        title: "Demand Forecasting App",
+        description:
+          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
         outcomes: [
-          "Zusammenführung von Daten aus unterschiedlichen Quellen",
-          "Interaktives Dashboard (Entwicklung und Zusammenhänge)",
-          "Stakeholder Dokumentation aller Schritte vom Projektplan bis zur Präsentation der Ergebnisse",
+          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
+          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
+          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+        ],
+        githubUrl:
+          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
+        liveUrl: "https://example.com",
+      },
+      {
+        id: 12,
+        title: "Customer Segmentation",
+        description:
+          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
+        outcomes: [
+          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
+          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
+          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+        ],
+        githubUrl:
+          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
+        liveUrl: "https://example.com",
+      },
+      {
+        id: 13,
+        title: "AI Data Analysis App",
+        description:
+          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
+        outcomes: [
+          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
+          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
+          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+        ],
+        githubUrl:
+          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
+        liveUrl: "https://example.com",
+      },
+      {
+        id: 20,
+        title: "Wie steht es um die Schulbildung in Deutschland?",
+        description:
+          "Datenanalyse zur Leistungsentwicklung deutscher Schüler: Internationaler OECD-Benchmark und föderale Heterogenität im interaktiven Dashboard.",
+        tags: ["Tableau", "Data Analysis", "ETL", "Benchmarking"],
+        outcomes: [
+          "Integration und Bereinigung von Primärdaten aus PISA- und IQB-Studien",
+          "Interaktive Visualisierung von Leistungstrends nach Bundesland und Schulform",
         ],
         githubUrl:
           "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
-        liveUrl: "https://example.com",
+        liveUrl:
+          "https://public.tableau.com/views/Schulbildung_in_Deutschland/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
       },
       // {
-      //   id: 3,
+      //   id: 30,
       //   title: "Wird der DAX steigen oder fallen?",
       //   description: "Ein Time-Series Analysetool zur Entwicklung des DAX",
       //   tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
@@ -330,28 +428,34 @@ export const portfolioData = {
       //   liveUrl: "https://example.com",
       // },
       {
-        id: 4,
-        title: "Was ist das beste Land für die Vermarktung von Bahnreisen?",
+        id: 40,
+        title: "Markteintrittsstrategie: Attraktivste Märkte für Bahnreisen",
         description:
-          "Ein BI-Analyse Projekt für ein Startup, das das beste Land sucht, um dort Bahnreisen anzubieten.",
-        tags: ["Tableau"],
+          "BI-gestützte Standort- und Marktanalyse für ein Reise-Startup zur datengetriebenen Identifikation des optimalen Zielmarktes für Bahnreisen.",
+        tags: [
+          "Tableau",
+          "Business Intelligence",
+          "Market Analysis",
+          "Data Storytelling",
+        ],
         outcomes: [
-          "Die Beschreibung des Auswahlverfahrens in einer Abfolge von Visualisierungen",
-          "Ein interaktives Dashboard für das Management, um verschiedene alternative Datenkonstallationen anzuzeigen",
+          "Strukturiertes Data Storytelling zur Nachvollziehbarkeit des mehrstufigen Länderauswahlprozesses",
+          "Interaktives Management-Dashboard für dynamische Szenarioanalysen und Kriterien-Gewichtungen",
         ],
         githubUrl: "https://github.com/birgit2704/railway_travel_business",
         liveUrl:
           "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
       },
       {
-        id: 5,
-        title: "SQL Übungsapp für Entwickler, Analysten und Studenten",
-        description: "Testen und trainieren Sie Ihre SQL Kenntnisse",
-        tags: ["SQLite", "Google AI Studio"],
+        id: 50,
+        title: "SQL-Lernplattform für Entwickler & Analysten",
+        description:
+          "Interaktive Applikation zum vertiefenden Üben von SQL-Abfragen mit direkter Ausführung und Unterstützung.",
+        tags: ["SQLite", "Google AI Studio", "EdTech"],
         outcomes: [
-          "36 Challenges in 3 Kategorien (beginner, intermediate, advanced)",
-          "Tipps auf Anfrage",
-          "Vorschau der Datanbanktabellen für besseren Überblick",
+          "Strukturierte Challenge-Sammlung mit 36 Aufgaben in drei Schwierigkeitsstufen",
+          "Hilfestellungen (Hints) zur gezielten Unterstützung beim Finden der Lösung",
+          "Integrierte Schema- und Tabellenansichten für ein intuitives Verständnis des Datenmodells",
         ],
         githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://bb-sql-practice-app.netlify.app/",
