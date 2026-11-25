@@ -184,7 +184,7 @@ export default function App() {
               <p
                 className={`text-lg text-slate-400 max-w-2xl leading-relaxed ${
                   isTypingDone
-                    ? "opacity-100 translate-y-0 transition-all duration-700 delay-700 ease-out"
+                    ? "opacity-100 translate-y-0 transition-all duration-700 delay-1700 ease-out"
                     : "opacity-0 translate-y-4"
                 }`}
               >
@@ -195,7 +195,7 @@ export default function App() {
               <div
                 className={`flex flex-wrap items-center gap-4 pt-4 ${
                   isTypingDone
-                    ? "opacity-100 translate-y-0 transition-all duration-700 delay-[900ms] ease-out"
+                    ? "opacity-100 translate-y-0 transition-all duration-700 delay-2000 ease-out"
                     : "opacity-0 translate-y-4"
                 }`}
               >
@@ -527,14 +527,14 @@ function TypewriterHeading({ headline, subline, speed = 45, onComplete }) {
       <span className="absolute inset-0">
         {typedHeadline}
         {!isDone && isTypingHeadline && (
-          <span className="inline-block w-[3px] h-[0.9em] bg-indigo-400 ml-1 align-middle animate-pulse" />
+          <span className="inline-block w-0.75 h-[0.9em] bg-indigo-400 ml-1 align-middle animate-pulse" />
         )}
         <br />
         <span className="bg-linear-to-r from-indigo-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent">
           {typedSubline}
         </span>
         {!isDone && !isTypingHeadline && (
-          <span className="inline-block w-[3px] h-[0.9em] bg-emerald-400 ml-1 align-middle animate-pulse" />
+          <span className="inline-block w-0.75 h-[0.9em] bg-emerald-400 ml-1 align-middle animate-pulse" />
         )}
       </span>
     </h1>
