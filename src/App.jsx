@@ -67,20 +67,30 @@ export default function App() {
   };
 
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+  const [slideDirection, setSlideDirection] = useState("next");
 
   const handlePrevProject = () => {
+    setSlideDirection("prev");
     setActiveProjectIndex((prev) =>
       prev === 0 ? projects.length - 1 : prev - 1,
     );
   };
 
   const handleNextProject = () => {
+    setSlideDirection("next");
     setActiveProjectIndex((prev) =>
       prev === projects.length - 1 ? 0 : prev + 1,
     );
   };
 
+  const handleDotClick = (idx) => {
+    setSlideDirection(idx >= activeProjectIndex ? "next" : "prev");
+    setActiveProjectIndex(idx);
+  };
+
   const currentProject = projects[activeProjectIndex];
+  const slideAnimClass =
+    slideDirection === "next" ? "animate-slide-next" : "animate-slide-prev";
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500 selection:text-white">
@@ -308,8 +318,8 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             {/* LEFT 1/3: Project Details Card */}
             <div
-              key={currentProject.id}
-              className="lg:col-span-4 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300"
+              key={`${currentProject.id}-card`}
+              className={`lg:col-span-4 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-colors duration-300 ${slideAnimClass}`}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -372,20 +382,23 @@ export default function App() {
 
             {/* RIGHT 2/3: Colored Background & Two Overlapping Images */}
             <div
-              className={`lg:col-span-8 relative rounded-2xl border border-slate-800/80 overflow-hidden min-h-[340px] sm:min-h-[420px] p-6 sm:p-10 flex items-center justify-center bg-gradient-to-br ${
+              className={`lg:col-span-8 relative rounded-2xl border border-slate-800/80 overflow-hidden min-h-[340px] sm:min-h-[420px] p-6 sm:p-10 flex items-center justify-center bg-gradient-to-br transition-all duration-500 ${
                 currentProject.accentBg ||
-                "from-indigo-600/25 via-indigo-950/40 to-slate-900/90"
+                "from-indigo-600 via-violet-600/90 to-indigo-950"
               }`}
             >
-              {/* Subtle Ambient Glow */}
-              <div className="absolute -top-24 -right-24 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
-              <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+              {/* Studio Lighting Glows */}
+              <div className="absolute -top-24 -right-24 w-80 h-80 bg-white/15 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-black/25 rounded-full blur-3xl pointer-events-none" />
 
-              {/* Overlapping Images Wrapper */}
-              <div className="relative w-full h-full flex items-center justify-center">
+              {/* Keyed Inner Stage for Image Entrance */}
+              <div
+                key={`${currentProject.id}-images`}
+                className="relative w-full h-full flex items-center justify-center"
+              >
                 {/* Image 1: Back-Left */}
                 {currentProject.images?.[0] && (
-                  <div className="w-[68%] sm:w-[64%] mr-auto mb-10 sm:mb-14 rounded-xl overflow-hidden border border-slate-700/70 shadow-2xl shadow-slate-950/80 bg-slate-900 transition-transform duration-500 hover:scale-[1.02] z-10">
+                  <div className="w-[68%] sm:w-[64%] mr-auto mb-10 sm:mb-14 rounded-xl overflow-hidden border border-white/25 shadow-2xl shadow-slate-950/80 bg-slate-900 transition-transform duration-500 hover:scale-[1.02] z-10 animate-float-in">
                     <img
                       src={currentProject.images[0]}
                       alt={`${currentProject.title} preview 1`}
@@ -394,9 +407,12 @@ export default function App() {
                   </div>
                 )}
 
-                {/* Image 2: Front-Right Overlapping */}
+                {/* Image 2: Front-Right Overlapping (Delayed by 100ms) */}
                 {currentProject.images?.[1] && (
-                  <div className="w-[68%] sm:w-[64%] ml-auto mt-10 sm:mt-14 -ml-[32%] sm:-ml-[28%] rounded-xl overflow-hidden border border-indigo-400/30 shadow-2xl shadow-slate-950/90 bg-slate-900 transition-transform duration-500 hover:scale-[1.03] hover:z-30 z-20">
+                  <div
+                    style={{ animationDelay: "100ms" }}
+                    className="w-[68%] sm:w-[64%] ml-auto mt-10 sm:mt-14 -ml-[32%] sm:-ml-[28%] rounded-xl overflow-hidden border border-white/30 shadow-2xl shadow-slate-950/90 bg-slate-900 transition-transform duration-500 hover:scale-[1.03] hover:z-30 z-20 opacity-0 animate-float-in"
+                  >
                     <img
                       src={currentProject.images[1]}
                       alt={`${currentProject.title} preview 2`}
@@ -413,7 +429,7 @@ export default function App() {
             {projects.map((project, idx) => (
               <button
                 key={project.id}
-                onClick={() => setActiveProjectIndex(idx)}
+                onClick={() => handleDotClick(idx)}
                 aria-label={`Go to project ${idx + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                   idx === activeProjectIndex
