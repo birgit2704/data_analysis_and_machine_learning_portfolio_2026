@@ -389,10 +389,10 @@ export const portfolioData = {
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-indigo-600 via-violet-600/90 to-indigo-950", // Optional per-project backdrop
       },
       {
         id: 11,
@@ -409,10 +409,10 @@ export const portfolioData = {
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-cyan-500 via-blue-600/90 to-blue-950", // Optional per-project backdrop
       },
       {
         id: 12,
@@ -429,10 +429,10 @@ export const portfolioData = {
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-emerald-500 via-teal-600/90 to-teal-950", // Optional per-project backdrop
       },
       {
         id: 13,
@@ -449,10 +449,10 @@ export const portfolioData = {
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-rose-500 via-pink-600/90 to-purple-950", // Optional per-project backdrop
       },
       {
         id: 20,
@@ -469,10 +469,10 @@ export const portfolioData = {
         liveUrl:
           "https://public.tableau.com/views/Schulbildung_in_Deutschland/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-amber-500 via-orange-600/90 to-red-950", // Optional per-project backdrop
       },
       // {
       //   id: 30,
@@ -507,10 +507,10 @@ export const portfolioData = {
         liveUrl:
           "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-fuchsia-500 via-purple-600/90 to-indigo-950", // Optional per-project backdrop
       },
       {
         id: 50,
@@ -526,10 +526,10 @@ export const portfolioData = {
         githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://bb-sql-practice-app.netlify.app/",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-sky-500 via-blue-600/90 to-indigo-950", // Optional per-project backdrop
       },
     ],
     contact: {

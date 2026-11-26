@@ -8,6 +8,7 @@ import {
   Database,
   Terminal,
   Sparkles,
+  ChevronLeft,
   ChevronRight,
   Menu,
   X,
@@ -64,6 +65,22 @@ export default function App() {
     setIsTypingDone(false); // Reset photo animation if you switch between EN/DE
     setLang(lang === "en" ? "de" : "en");
   };
+
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+
+  const handlePrevProject = () => {
+    setActiveProjectIndex((prev) =>
+      prev === 0 ? projects.length - 1 : prev - 1,
+    );
+  };
+
+  const handleNextProject = () => {
+    setActiveProjectIndex((prev) =>
+      prev === projects.length - 1 ? 0 : prev + 1,
+    );
+  };
+
+  const currentProject = projects[activeProjectIndex];
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500 selection:text-white">
@@ -255,73 +272,155 @@ export default function App() {
 
         {/* Featured Projects */}
         <section id="projects" className="py-20 border-b border-slate-800/60">
-          <div className="flex flex-col gap-2 mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-white">
-              {projectsHeader.title}
-            </h2>
-            <p className="text-slate-400">{projectsHeader.subtitle}</p>
+          {/* Header + Carousel Controls */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+            <div className="flex flex-col gap-2">
+              <h2 className="text-3xl font-bold tracking-tight text-white">
+                {projectsHeader.title}
+              </h2>
+              <p className="text-slate-400">{projectsHeader.subtitle}</p>
+            </div>
+
+            {/* Navigation Arrows & Slide Counter */}
+            <div className="flex items-center gap-3 self-start sm:self-auto">
+              <span className="text-sm font-mono text-slate-400 mr-1">
+                {String(activeProjectIndex + 1).padStart(2, "0")} /{" "}
+                {String(projects.length).padStart(2, "0")}
+              </span>
+              <button
+                onClick={handlePrevProject}
+                aria-label="Previous project"
+                className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/50 transition-colors cursor-pointer"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={handleNextProject}
+                aria-label="Next project"
+                className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/50 transition-colors cursor-pointer"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-slate-900/60 border border-slate-800/80 rounded-xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all group hover:-translate-y-1 duration-200"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="p-2 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400">
-                      <Terminal className="w-5 h-5" />
-                    </span>
-                    <div className="flex items-center gap-2">
+          {/* 1/3 Card + 2/3 Overlapping Images Showcase */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* LEFT 1/3: Project Details Card */}
+            <div
+              key={currentProject.id}
+              className="lg:col-span-4 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="p-2 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400">
+                    <Terminal className="w-5 h-5" />
+                  </span>
+                  <div className="flex items-center gap-2">
+                    {currentProject.githubUrl && (
                       <a
-                        href={project.githubUrl}
+                        href={currentProject.githubUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-slate-400 hover:text-white p-1"
+                        className="text-slate-400 hover:text-white p-1 transition-colors"
                       >
                         <GithubIcon className="w-6 h-6" />
                       </a>
+                    )}
+                    {currentProject.liveUrl && (
                       <a
-                        href={project.liveUrl}
+                        href={currentProject.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-slate-400 hover:text-white p-1"
+                        className="text-slate-400 hover:text-white p-1 transition-colors"
                       >
                         <ExternalLink className="w-5 h-5" />
                       </a>
-                    </div>
+                    )}
                   </div>
-
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-base text-slate-400 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <ul className="space-y-1.5 mb-6 text-base text-slate-300">
-                    {project.outcomes.map((outcome, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-indigo-400 font-bold">•</span>
-                        <span>{outcome}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
 
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/60">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2.5 py-1 rounded-md text-sm  bg-slate-800/80 text-slate-300 border border-slate-700/50"
-                    >
-                      {tag}
-                    </span>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {currentProject.title}
+                </h3>
+
+                <p className="text-base text-slate-400 mb-4 leading-relaxed">
+                  {currentProject.description}
+                </p>
+
+                <ul className="space-y-1.5 mb-6 text-base text-slate-300">
+                  {currentProject.outcomes.map((outcome, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-indigo-400 font-bold">•</span>
+                      <span>{outcome}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
+
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/60">
+                {currentProject.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-md text-sm bg-slate-800/80 text-slate-300 border border-slate-700/50"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT 2/3: Colored Background & Two Overlapping Images */}
+            <div
+              className={`lg:col-span-8 relative rounded-2xl border border-slate-800/80 overflow-hidden min-h-[340px] sm:min-h-[420px] p-6 sm:p-10 flex items-center justify-center bg-gradient-to-br ${
+                currentProject.accentBg ||
+                "from-indigo-600/25 via-indigo-950/40 to-slate-900/90"
+              }`}
+            >
+              {/* Subtle Ambient Glow */}
+              <div className="absolute -top-24 -right-24 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Overlapping Images Wrapper */}
+              <div className="relative w-full h-full flex items-center justify-center">
+                {/* Image 1: Back-Left */}
+                {currentProject.images?.[0] && (
+                  <div className="w-[68%] sm:w-[64%] mr-auto mb-10 sm:mb-14 rounded-xl overflow-hidden border border-slate-700/70 shadow-2xl shadow-slate-950/80 bg-slate-900 transition-transform duration-500 hover:scale-[1.02] z-10">
+                    <img
+                      src={currentProject.images[0]}
+                      alt={`${currentProject.title} preview 1`}
+                      className="w-full h-auto object-cover aspect-video"
+                    />
+                  </div>
+                )}
+
+                {/* Image 2: Front-Right Overlapping */}
+                {currentProject.images?.[1] && (
+                  <div className="w-[68%] sm:w-[64%] ml-auto mt-10 sm:mt-14 -ml-[32%] sm:-ml-[28%] rounded-xl overflow-hidden border border-indigo-400/30 shadow-2xl shadow-slate-950/90 bg-slate-900 transition-transform duration-500 hover:scale-[1.03] hover:z-30 z-20">
+                    <img
+                      src={currentProject.images[1]}
+                      alt={`${currentProject.title} preview 2`}
+                      className="w-full h-auto object-cover aspect-video"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Pagination Dots */}
+          <div className="flex items-center justify-center gap-2 mt-8">
+            {projects.map((project, idx) => (
+              <button
+                key={project.id}
+                onClick={() => setActiveProjectIndex(idx)}
+                aria-label={`Go to project ${idx + 1}`}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  idx === activeProjectIndex
+                    ? "w-8 bg-indigo-400"
+                    : "w-2 bg-slate-700 hover:bg-slate-500"
+                }`}
+              />
             ))}
           </div>
         </section>

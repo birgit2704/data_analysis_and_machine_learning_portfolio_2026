@@ -15,3 +15,42 @@
   /* cubic-bezier(0.22, 1, 0.36, 1) gives a crisp deceleration as it locks into place */
   animation: spin-grow 1.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+@theme {
+  --animate-slide-next: slideNext 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-prev: slidePrev 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-float-in: floatIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes slideNext {
+    0% {
+      opacity: 0;
+      transform: translateX(24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slidePrev {
+    0% {
+      opacity: 0;
+      transform: translateX(-24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes floatIn {
+    0% {
+      opacity: 0;
+      transform: translateY(16px) scale(0.97);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
