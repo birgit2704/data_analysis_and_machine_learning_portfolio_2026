@@ -92,6 +92,15 @@ export default function App() {
   const slideAnimClass =
     slideDirection === "next" ? "animate-slide-next" : "animate-slide-prev";
 
+  const [flippedCards, setFlippedCards] = useState({});
+
+  const toggleCard = (category) => {
+    setFlippedCards((prev) => ({
+      ...prev,
+      [category]: !prev[category],
+    }));
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500 selection:text-white">
       {/* Navigation Header */}
@@ -475,33 +484,60 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(skills).map(([category, skillList], index) => {
               const icons = [
-                <Code2 className="w-5 h-5" />,
-                <Database className="w-5 h-5" />,
-                <Terminal className="w-5 h-5" />,
+                <Code2 className="w-7 h-7" />,
+                <Database className="w-7 h-7" />,
+                <Terminal className="w-7 h-7" />,
               ];
+              const isFlipped = !!flippedCards[category];
+
               return (
                 <div
                   key={category}
-                  className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6"
+                  onClick={() => toggleCard(category)}
+                  className="group h-64 cursor-pointer [perspective:1000px]"
                 >
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="p-2 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400">
-                      {icons[index % icons.length]}
-                    </span>
-                    <h3 className="text-lg font-semibold text-white">
-                      {category}
-                    </h3>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {skillList.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1.5 rounded-lg text-sm bg-slate-800/60 text-slate-200 border border-slate-700/40 hover:border-indigo-500/40 transition-colors"
-                      >
-                        {skill}
+                  <div
+                    className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
+                      isFlipped ? "[transform:rotateY(180deg)]" : ""
+                    }`}
+                  >
+                    {/* FRONT SIDE */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 [backface-visibility:hidden] group-hover:border-indigo-500/40 transition-colors">
+                      <span className="p-3.5 rounded-xl bg-indigo-950/80 border border-indigo-800/40 text-indigo-400 shadow-lg shadow-indigo-950/20">
+                        {icons[index % icons.length]}
                       </span>
-                    ))}
+                      <h3 className="text-xl font-semibold text-white tracking-wide text-center">
+                        {category}
+                      </h3>
+                      <span className="text-xs text-slate-500 mt-2">
+                        Hover or tap to view
+                      </span>
+                    </div>
+
+                    {/* BACK SIDE */}
+                    <div className="absolute inset-0 flex flex-col justify-between bg-slate-700/90 border border-indigo-500/40 rounded-xl p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                      <div>
+                        {/* <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/80">
+                          <span className="text-sm font-medium text-indigo-400">
+                            {category}
+                          </span>
+                          <span className="text-xs text-slate-500">
+                            {skillList.length} skills
+                          </span>
+                        </div> */}
+
+                        <div className="flex flex-wrap gap-2">
+                          {skillList.map((skill) => (
+                            <span
+                              key={skill}
+                              className="px-3 py-1.5 rounded-lg text-sm bg-slate-800/80 text-slate-200 border border-slate-700/50"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               );
