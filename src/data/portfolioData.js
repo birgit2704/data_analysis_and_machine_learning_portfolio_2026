@@ -81,6 +81,11 @@ export const portfolioData = {
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 11,
@@ -96,6 +101,11 @@ export const portfolioData = {
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 12,
@@ -111,6 +121,11 @@ export const portfolioData = {
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 13,
@@ -126,6 +141,11 @@ export const portfolioData = {
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 20,
@@ -141,6 +161,11 @@ export const portfolioData = {
           "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
         liveUrl:
           "https://public.tableau.com/views/Schulbildung_in_Deutschland/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       // {
       //   id: 30,
@@ -174,6 +199,11 @@ export const portfolioData = {
         githubUrl: "https://github.com/birgit2704/railway_travel_business",
         liveUrl:
           "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 50,
@@ -188,6 +218,11 @@ export const portfolioData = {
         ],
         githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://bb-sql-practice-app.netlify.app/",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
     ],
     contact: {
@@ -353,6 +388,11 @@ export const portfolioData = {
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 11,
@@ -368,6 +408,11 @@ export const portfolioData = {
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 12,
@@ -383,6 +428,11 @@ export const portfolioData = {
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 13,
@@ -398,6 +448,11 @@ export const portfolioData = {
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 20,
@@ -413,6 +468,11 @@ export const portfolioData = {
           "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
         liveUrl:
           "https://public.tableau.com/views/Schulbildung_in_Deutschland/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       // {
       //   id: 30,
@@ -446,6 +506,11 @@ export const portfolioData = {
         githubUrl: "https://github.com/birgit2704/railway_travel_business",
         liveUrl:
           "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
       {
         id: 50,
@@ -460,6 +525,11 @@ export const portfolioData = {
         ],
         githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://bb-sql-practice-app.netlify.app/",
+        images: [
+          "/images/churn-dashboard.png", // Primary (back-left) screenshot
+          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+        ],
+        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
       },
     ],
     contact: {
