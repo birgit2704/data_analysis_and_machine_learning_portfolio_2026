@@ -10,6 +10,7 @@ import {
   Sparkles,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   Menu,
   X,
   Globe,
@@ -100,6 +101,8 @@ export default function App() {
       [category]: !prev[category],
     }));
   };
+
+  const [isCertificatesOpen, setIsCertificatesOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500 selection:text-white">
@@ -494,7 +497,7 @@ export default function App() {
                 <div
                   key={category}
                   onClick={() => toggleCard(category)}
-                  className="group h-64 cursor-pointer [perspective:1000px]"
+                  className="group h-76 cursor-pointer [perspective:1000px]"
                 >
                   <div
                     className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
@@ -502,7 +505,7 @@ export default function App() {
                     }`}
                   >
                     {/* FRONT SIDE */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 [backface-visibility:hidden] group-hover:border-indigo-500/40 transition-colors">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-slate-700/40 border border-slate-800/80 rounded-xl p-6 [backface-visibility:hidden] group-hover:border-indigo-500/40 transition-colors">
                       <span className="p-3.5 rounded-xl bg-indigo-950/80 border border-indigo-800/40 text-indigo-400 shadow-lg shadow-indigo-950/20">
                         {icons[index % icons.length]}
                       </span>
@@ -517,14 +520,14 @@ export default function App() {
                     {/* BACK SIDE */}
                     <div className="absolute inset-0 flex flex-col justify-between bg-slate-700/90 border border-indigo-500/40 rounded-xl p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                       <div>
-                        {/* <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/80">
+                        <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/80">
                           <span className="text-sm font-medium text-indigo-400">
                             {category}
                           </span>
                           <span className="text-xs text-slate-500">
                             {skillList.length} skills
                           </span>
-                        </div> */}
+                        </div>
 
                         <div className="flex flex-wrap gap-2">
                           {skillList.map((skill) => (
@@ -550,20 +553,22 @@ export default function App() {
           id="certificates"
           className="py-20 border-b border-slate-800/60"
         >
-          <div className="flex flex-col gap-2 mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-white">
-              {certificatesHeader.title}
-            </h2>
-            <div className="flex gap-6">
-              <p className="text-slate-400 pt-2">
-                {certificatesHeader.subtitle}
-              </p>
+          {/* Header & External Links */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+            <div className="flex flex-col gap-2">
+              <h2 className="text-3xl font-bold tracking-tight text-white">
+                {certificatesHeader.title}
+              </h2>
+              <p className="text-slate-400">{certificatesHeader.subtitle}</p>
+            </div>
 
+            <div className="flex items-center gap-3">
               <a
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-indigo-400 hover:text-white hover:border-slate-700 transition-all"
+                aria-label="LinkedIn"
+                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-indigo-400 hover:text-white hover:border-indigo-500/40 transition-all"
               >
                 <LinkedinIcon className="w-5 h-5" />
               </a>
@@ -571,51 +576,89 @@ export default function App() {
                 href={personalInfo.credly}
                 target="_blank"
                 rel="noreferrer"
-                className="text-indigo-400 pt-2 hover:text-white"
+                className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-sm font-medium text-indigo-400 hover:text-white hover:border-indigo-500/40 transition-all"
               >
                 Credly
               </a>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {certificates.map((cert) => (
-              <a
-                key={cert.id}
-                href={cert.credentialUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-900/80 transition-all group duration-200"
-              >
-                <div className="flex items-start gap-4">
-                  {cert.image ? (
-                    <img
-                      src={cert.image}
-                      alt={cert.name}
-                      className="w-22 h-20 object-contain"
-                    />
-                  ) : (
-                    <span className="p-2.5 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400 group-hover:text-indigo-300 transition-colors">
-                      <Award className="w-6 h-6" />
+          {/* Accordion Trigger Bar */}
+          <button
+            type="button"
+            onClick={() => setIsCertificatesOpen((prev) => !prev)}
+            aria-expanded={isCertificatesOpen}
+            className="w-full flex items-center justify-between px-6 py-4 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-indigo-500/50 hover:bg-slate-900 transition-all group cursor-pointer"
+          >
+            <div className="flex items-center gap-3">
+              <span className="p-2 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400">
+                <Award className="w-5 h-5" />
+              </span>
+              <span className="text-base font-semibold text-white group-hover:text-indigo-300 transition-colors">
+                {isCertificatesOpen ? "Hide Certificates" : "View Certificates"}
+              </span>
+              <span className="px-2.5 py-0.5 text-xs font-medium rounded-full bg-slate-800 text-slate-300 border border-slate-700/60">
+                {certificates.length}
+              </span>
+            </div>
+
+            <ChevronDown
+              className={`w-5 h-5 text-slate-400 group-hover:text-white transition-transform duration-300 ${
+                isCertificatesOpen ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          {/* Smooth Slide-Down Wrapper */}
+          <div
+            className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+              isCertificatesOpen
+                ? "grid-rows-[1fr] opacity-100 mt-6"
+                : "grid-rows-[0fr] opacity-0 mt-0"
+            }`}
+          >
+            <div className="overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {certificates.map((cert) => (
+                  <a
+                    key={cert.id}
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    tabIndex={isCertificatesOpen ? 0 : -1}
+                    className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-900/80 transition-all group duration-200"
+                  >
+                    <div className="flex items-start gap-4">
+                      {cert.image ? (
+                        <img
+                          src={cert.image}
+                          alt={cert.name || cert.title}
+                          className="w-20 h-20 object-contain shrink-0"
+                        />
+                      ) : (
+                        <span className="p-2.5 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400 group-hover:text-indigo-300 transition-colors shrink-0">
+                          <Award className="w-6 h-6" />
+                        </span>
+                      )}
+
+                      <div>
+                        <h3 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
+                          {cert.title}
+                        </h3>
+                        <p className="text-sm text-slate-400 mt-0.5">
+                          {cert.issuer} •{" "}
+                          <span className="text-slate-500">{cert.date}</span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <span className="p-2 text-slate-500 group-hover:text-white transition-colors shrink-0">
+                      <ExternalLink className="w-5 h-5" />
                     </span>
-                  )}
-
-                  <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
-                      {cert.title}
-                    </h3>
-                    <p className="text-sm text-slate-400 mt-0.5">
-                      {cert.issuer} •{" "}
-                      <span className="text-slate-500">{cert.date}</span>
-                    </p>
-                  </div>
-                </div>
-
-                <span className="p-2 text-slate-500 group-hover:text-white transition-colors">
-                  <ExternalLink className="w-5 h-5" />
-                </span>
-              </a>
-            ))}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
