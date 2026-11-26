@@ -69,23 +69,24 @@ export const portfolioData = {
     projects: [
       {
         id: 10,
-        title: "Subscriber Churn Analysis & Risk Prediction",
+        title: "Warum laufen uns die Abonnenten davon und was kostet uns das?",
         description:
-          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
+          "End-to-End User Churn Analysis & Risk Prediction für einen Video-Streaming-Anbieter.",
         tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
         outcomes: [
-          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
-          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
-          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+          "Interaktives Tableau-Dashboard zur Visualisierung von Churn-Treibern und Kundensegmenten",
+          "Prädiktives Machine-Learning-Modell zur frühzeitigen Identifikation kündigungsgefährdeter Abonnenten",
+          "Quantifizierung des drohenden MRR-Verlusts und Priorisierung von High-Value-Kunden",
         ],
         githubUrl:
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-indigo-600 via-violet-600/90 to-indigo-950", // Optional per-project backdrop
+        projNameColor: "text-indigo-300",
       },
       {
         id: 11,
@@ -102,10 +103,11 @@ export const portfolioData = {
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-rose-500 via-pink-600/90 to-purple-950", // Optional per-project backdrop
+        projNameColor: "text-rose-400",
       },
       {
         id: 12,
@@ -122,10 +124,11 @@ export const portfolioData = {
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-emerald-500 via-teal-600/90 to-teal-950", // Optional per-project backdrop
+        projNameColor: "text-emerald-300",
       },
       {
         id: 13,
@@ -142,40 +145,42 @@ export const portfolioData = {
           "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
         liveUrl: "https://example.com",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-cyan-500 via-blue-600/90 to-blue-950", // Optional per-project backdrop
+        projNameColor: "text-cyan-400",
       },
       {
         id: 20,
-        title: "The State of School Education in Germany",
+        title: "Wie steht es um die Schulbildung in Deutschland?",
         description:
-          "Data analysis of student performance trends: International OECD benchmarks and regional federal disparities in an interactive dashboard.",
+          "Datenanalyse zur Leistungsentwicklung deutscher Schüler: Internationaler OECD-Benchmark und föderale Heterogenität im interaktiven Dashboard.",
         tags: ["Tableau", "Data Analysis", "ETL", "Benchmarking"],
         outcomes: [
-          "Integration and cleaning of primary data from OECD PISA and national IQB studies",
-          "Interactive visualization of performance trends across federal states and school tracks",
+          "Integration und Bereinigung von Primärdaten aus PISA- und IQB-Studien",
+          "Interaktive Visualisierung von Leistungstrends nach Bundesland und Schulform",
         ],
         githubUrl:
           "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
         liveUrl:
           "https://public.tableau.com/views/Schulbildung_in_Deutschland/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-amber-500 via-orange-600/90 to-red-950", // Optional per-project backdrop
+        projNameColor: "text-amber-400",
       },
       // {
       //   id: 30,
-      //   title: "Will the DAX fall or rise?",
-      //   description: "A a time series analysis tool to predict the DAX",
+      //   title: "Wird der DAX steigen oder fallen?",
+      //   description: "Ein Time-Series Analysetool zur Entwicklung des DAX",
       //   tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
       //   outcomes: [
-      //     "Interactive dashboard (development and relations)",
-      //     "Machine Learning tool to predict the DAX",
-      //     "Stakeholder documentation of all project steps from project plan to final presentation",
+      //     "Interaktives Dashboard (Entwicklung und Ursachen)",
+      //     "Ein Machine-Learning Modell für zukünftige Entwicklung.",
+      //     "Stakeholder Dokumentation aller Schritte vom Projektplan bis zur Präsentation der Ergebnisse",
       //   ],
       //   githubUrl:
       //     "https://github.com/birgit2704/dax_time_series_analysis_2026",
@@ -183,9 +188,9 @@ export const portfolioData = {
       // },
       {
         id: 40,
-        title: "Market Entry Strategy: Optimal Target Markets for Rail Travel",
+        title: "Markteintrittsstrategie: Attraktivste Märkte für Bahnreisen",
         description:
-          "BI-driven market evaluation for a travel startup to identify the most attractive European country for launching rail tourism offerings.",
+          "BI-gestützte Standort- und Marktanalyse für ein Reise-Startup zur datengetriebenen Identifikation des optimalen Zielmarktes für Bahnreisen.",
         tags: [
           "Tableau",
           "Business Intelligence",
@@ -193,36 +198,38 @@ export const portfolioData = {
           "Data Storytelling",
         ],
         outcomes: [
-          "Structured data storytelling guiding stakeholders through the multi-stage country selection funnel",
-          "Interactive executive dashboard enabling dynamic scenario analysis and custom metric weighting",
+          "Strukturiertes Data Storytelling zur Nachvollziehbarkeit des mehrstufigen Länderauswahlprozesses",
+          "Interaktives Management-Dashboard für dynamische Szenarioanalysen und Kriterien-Gewichtungen",
         ],
         githubUrl: "https://github.com/birgit2704/railway_travel_business",
         liveUrl:
           "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-sky-500 via-blue-600/90 to-indigo-950", // Optional per-project backdrop
+        projNameColor: "text-sky-300",
       },
       {
         id: 50,
-        title: "SQL Practice App for Developers & Analysts",
+        title: "SQL-Lernplattform für Entwickler & Analysten",
         description:
-          "Interactive SQL training tool with realistic scenarios, live query execution, and assistance.",
+          "Interaktive Applikation zum vertiefenden Üben von SQL-Abfragen mit direkter Ausführung und Unterstützung.",
         tags: ["SQLite", "Google AI Studio", "EdTech"],
         outcomes: [
-          "Structured 3-tier curriculum featuring 36 hands-on query challenges",
-          "Hint generation to support problem-solving without spoiling answers",
-          "Instant database schema and table previews for rapid context switching",
+          "Strukturierte Challenge-Sammlung mit 36 Aufgaben in drei Schwierigkeitsstufen",
+          "Hilfestellungen (Hints) zur gezielten Unterstützung beim Finden der Lösung",
+          "Integrierte Schema- und Tabellenansichten für ein intuitives Verständnis des Datenmodells",
         ],
         githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://bb-sql-practice-app.netlify.app/",
         images: [
-          "/images/churn-dashboard.png", // Primary (back-left) screenshot
-          "/images/churn-shap.png", // Secondary (front-right overlapping) screenshot
+          "/images/image1.png", // Primary (back-left) screenshot
+          "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-indigo-600/30 via-purple-600/20 to-slate-900/90", // Optional per-project backdrop
+        accentBg: "from-fuchsia-500 via-purple-600/90 to-indigo-950", // Optional per-project backdrop
+        projNameColor: "text-fuchsia-300",
       },
     ],
     contact: {
