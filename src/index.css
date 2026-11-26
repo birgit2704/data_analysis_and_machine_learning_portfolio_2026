@@ -54,3 +54,27 @@
     }
   }
 }
+
+/* Colors defined directly in portfolioData.js
+{
+  // 1. Electric Indigo -> Violet (Matches your bg-indigo-600 buttons)
+  electricIndigo: "from-indigo-600 via-violet-600/90 to-indigo-950",
+
+  // 2. Vivid Cyan -> Royal Blue (High-contrast tech/SQL look)
+  vividOcean: "from-cyan-500 via-blue-600/90 to-blue-950",
+
+  // 3. Bright Emerald -> Teal (Punchy green for analytics/education)
+  brightEmerald: "from-emerald-500 via-teal-600/90 to-teal-950",
+
+  // 4. Vibrant Rose -> Magenta (Bold & energetic)
+  vibrantRose: "from-rose-500 via-pink-600/90 to-purple-950",
+
+  // 5. Warm Amber -> Deep Orange (High-energy contrast against dark UI)
+  warmSunset: "from-amber-500 via-orange-600/90 to-red-950",
+
+  // 6. Luminous Fuchsia -> Purple (Modern AI/creative feel)
+  luminousFuchsia: "from-fuchsia-500 via-purple-600/90 to-indigo-950",
+
+  // 7. Bright Sky -> Cobalt (Clean, crisp aviation/forecasting palette)
+  crispSky: "from-sky-500 via-blue-600/90 to-indigo-950",
+}; */

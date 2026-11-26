@@ -322,7 +322,7 @@ export default function App() {
               className={`lg:col-span-4 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-colors duration-300 ${slideAnimClass}`}
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
+                {/* <div className="flex items-center justify-between mb-4">
                   <span className="p-2 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400">
                     <Terminal className="w-5 h-5" />
                   </span>
@@ -348,20 +348,28 @@ export default function App() {
                       </a>
                     )}
                   </div>
-                </div>
+                </div> */}
 
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3
+                  className={`text-xl mb-6 font-bold ${currentProject.projNameColor}`}
+                >
                   {currentProject.title}
                 </h3>
 
-                <p className="text-base text-slate-400 mb-4 leading-relaxed">
+                <p className="text-base text-slate-400 mb-5 leading-relaxed">
                   {currentProject.description}
                 </p>
 
-                <ul className="space-y-1.5 mb-6 text-base text-slate-300">
+                <ul
+                  className={`space-y-1.5 mb-6 text-lg ${currentProject.projNameColor}`}
+                >
                   {currentProject.outcomes.map((outcome, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-indigo-400 font-bold">•</span>
+                      <span
+                        className={`font-bold ${currentProject.projNameColor}`}
+                      >
+                        •
+                      </span>
                       <span>{outcome}</span>
                     </li>
                   ))}
@@ -399,11 +407,18 @@ export default function App() {
                 {/* Image 1: Back-Left */}
                 {currentProject.images?.[0] && (
                   <div className="w-[68%] sm:w-[64%] mr-auto mb-10 sm:mb-14 rounded-xl overflow-hidden border border-white/25 shadow-2xl shadow-slate-950/80 bg-slate-900 transition-transform duration-500 hover:scale-[1.02] z-10 animate-float-in">
-                    <img
-                      src={currentProject.images[0]}
-                      alt={`${currentProject.title} preview 1`}
-                      className="w-full h-auto object-cover aspect-video"
-                    />
+                    <a
+                      href={currentProject.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={currentProject.images[0]}
+                        alt={`${currentProject.title} preview 1`}
+                        title="Github"
+                        className="w-full h-auto object-cover aspect-auto"
+                      />
+                    </a>
                   </div>
                 )}
 
@@ -413,11 +428,18 @@ export default function App() {
                     style={{ animationDelay: "100ms" }}
                     className="w-[68%] sm:w-[64%] ml-auto mt-10 sm:mt-14 -ml-[32%] sm:-ml-[28%] rounded-xl overflow-hidden border border-white/30 shadow-2xl shadow-slate-950/90 bg-slate-900 transition-transform duration-500 hover:scale-[1.03] hover:z-30 z-20 opacity-0 animate-float-in"
                   >
-                    <img
-                      src={currentProject.images[1]}
-                      alt={`${currentProject.title} preview 2`}
-                      className="w-full h-auto object-cover aspect-video"
-                    />
+                    <a
+                      href={currentProject.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={currentProject.images[1]}
+                        alt={`${currentProject.title} preview 2`}
+                        title="Project / App"
+                        className="w-full h-auto object-cover aspect-auto"
+                      />
+                    </a>
                   </div>
                 )}
               </div>

@@ -393,6 +393,7 @@ export const portfolioData = {
           "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-indigo-600 via-violet-600/90 to-indigo-950", // Optional per-project backdrop
+        projNameColor: "text-indigo-300",
       },
       {
         id: 11,
@@ -412,7 +413,8 @@ export const portfolioData = {
           "/images/image1.png", // Primary (back-left) screenshot
           "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-cyan-500 via-blue-600/90 to-blue-950", // Optional per-project backdrop
+        accentBg: "from-rose-500 via-pink-600/90 to-purple-950", // Optional per-project backdrop
+        projNameColor: "text-rose-400",
       },
       {
         id: 12,
@@ -433,6 +435,7 @@ export const portfolioData = {
           "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-emerald-500 via-teal-600/90 to-teal-950", // Optional per-project backdrop
+        projNameColor: "text-emerald-300",
       },
       {
         id: 13,
@@ -452,7 +455,8 @@ export const portfolioData = {
           "/images/image1.png", // Primary (back-left) screenshot
           "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-rose-500 via-pink-600/90 to-purple-950", // Optional per-project backdrop
+        accentBg: "from-cyan-500 via-blue-600/90 to-blue-950", // Optional per-project backdrop
+        projNameColor: "text-cyan-400",
       },
       {
         id: 20,
@@ -473,6 +477,7 @@ export const portfolioData = {
           "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-amber-500 via-orange-600/90 to-red-950", // Optional per-project backdrop
+        projNameColor: "text-amber-400",
       },
       // {
       //   id: 30,
@@ -510,7 +515,8 @@ export const portfolioData = {
           "/images/image1.png", // Primary (back-left) screenshot
           "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-fuchsia-500 via-purple-600/90 to-indigo-950", // Optional per-project backdrop
+        accentBg: "from-sky-500 via-blue-600/90 to-indigo-950", // Optional per-project backdrop
+        projNameColor: "text-sky-300",
       },
       {
         id: 50,
@@ -529,7 +535,8 @@ export const portfolioData = {
           "/images/image1.png", // Primary (back-left) screenshot
           "/images/image2.png", // Secondary (front-right overlapping) screenshot
         ],
-        accentBg: "from-sky-500 via-blue-600/90 to-indigo-950", // Optional per-project backdrop
+        accentBg: "from-fuchsia-500 via-purple-600/90 to-indigo-950", // Optional per-project backdrop
+        projNameColor: "text-fuchsia-300",
       },
     ],
     contact: {
