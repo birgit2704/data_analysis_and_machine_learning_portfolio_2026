@@ -67,6 +67,8 @@ export const portfolioData = {
         "Linux / WSL",
         "Postman",
         "LangChain",
+        "Ollama",
+        "LM Studio",
       ],
     },
     projectsHeader: {
@@ -160,44 +162,30 @@ export const portfolioData = {
       },
       {
         id: 20,
-        title: "Wie steht es um die Schulbildung in Deutschland?",
+        title: "What Is the State of School Education in Germany?",
         description:
-          "Datenanalyse zur Leistungsentwicklung deutscher Schüler: Internationaler OECD-Benchmark und föderale Heterogenität im interaktiven Dashboard.",
+          "Data analysis of German student performance trends: PISA studies and federal state comparison.",
         tags: ["Tableau", "Data Analysis", "ETL", "Benchmarking"],
         outcomes: [
-          "Integration und Bereinigung von Primärdaten aus PISA- und IQB-Studien",
-          "Interaktive Visualisierung von Leistungstrends nach Bundesland und Schulform",
+          "Integration and cleaning of primary data from PISA and IQB studies",
+          "Interactive visualization of performance trends by federal state and school type",
         ],
         githubUrl:
           "https://github.com/birgit2704/education_data_exploration_and_visualization_2026",
         liveUrl:
           "https://public.tableau.com/views/Schulbildung_in_Deutschland/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
         images: [
-          "/images/image1.png", // Primary (back-left) screenshot
-          "/images/image2.png", // Secondary (front-right overlapping) screenshot
+          "/images/education/img1.png", // Primary (back-left) screenshot
+          "/images/education/img2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-amber-500 via-orange-600/90 to-red-950", // Optional per-project backdrop
         projNameColor: "text-amber-400",
       },
-      // {
-      //   id: 30,
-      //   title: "Wird der DAX steigen oder fallen?",
-      //   description: "Ein Time-Series Analysetool zur Entwicklung des DAX",
-      //   tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
-      //   outcomes: [
-      //     "Interaktives Dashboard (Entwicklung und Ursachen)",
-      //     "Ein Machine-Learning Modell für zukünftige Entwicklung.",
-      //     "Stakeholder Dokumentation aller Schritte vom Projektplan bis zur Präsentation der Ergebnisse",
-      //   ],
-      //   githubUrl:
-      //     "https://github.com/birgit2704/dax_time_series_analysis_2026",
-      //   liveUrl: "https://example.com",
-      // },
       {
         id: 40,
-        title: "Markteintrittsstrategie: Attraktivste Märkte für Bahnreisen",
+        title: "Most Attractive Country for a Rail Travel Startup",
         description:
-          "BI-gestützte Standort- und Marktanalyse für ein Reise-Startup zur datengetriebenen Identifikation des optimalen Zielmarktes für Bahnreisen.",
+          "BI-supported location and market analysis to identify the optimal target market.",
         tags: [
           "Tableau",
           "Business Intelligence",
@@ -205,35 +193,35 @@ export const portfolioData = {
           "Data Storytelling",
         ],
         outcomes: [
-          "Strukturiertes Data Storytelling zur Nachvollziehbarkeit des mehrstufigen Länderauswahlprozesses",
-          "Interaktives Management-Dashboard für dynamische Szenarioanalysen und Kriterien-Gewichtungen",
+          "Structured data storytelling ensuring traceability of the multi-stage country selection process",
+          "Interactive management dashboard for dynamic scenario analyses and criteria weighting",
         ],
         githubUrl: "https://github.com/birgit2704/railway_travel_business",
         liveUrl:
           "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
         images: [
-          "/images/image1.png", // Primary (back-left) screenshot
-          "/images/image2.png", // Secondary (front-right overlapping) screenshot
+          "/images/railway/img1.png", // Primary (back-left) screenshot
+          "/images/railway/img2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-sky-500 via-blue-600/90 to-indigo-950", // Optional per-project backdrop
         projNameColor: "text-sky-300",
       },
       {
         id: 50,
-        title: "SQL-Lernplattform für Entwickler & Analysten",
+        title: "SQL Learning Platform for Students, Developers & Analysts",
         description:
-          "Interaktive Applikation zum vertiefenden Üben von SQL-Abfragen mit direkter Ausführung und Unterstützung.",
+          "Interactive app for in-depth SQL query practice with live execution and guided support.",
         tags: ["SQLite", "Google AI Studio", "EdTech"],
         outcomes: [
-          "Strukturierte Challenge-Sammlung mit 36 Aufgaben in drei Schwierigkeitsstufen",
-          "Hilfestellungen (Hints) zur gezielten Unterstützung beim Finden der Lösung",
-          "Integrierte Schema- und Tabellenansichten für ein intuitives Verständnis des Datenmodells",
+          "Structured challenge collection featuring 36 tasks across three difficulty levels",
+          "Targeted hints to guide users toward the solution",
+          "Integrated schema and table views for an intuitive understanding of the data",
         ],
         githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://bb-sql-practice-app.netlify.app/",
         images: [
-          "/images/image1.png", // Primary (back-left) screenshot
-          "/images/image2.png", // Secondary (front-right overlapping) screenshot
+          "/images/sql/img1.png", // Primary (back-left) screenshot
+          "/images/sql/img2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-fuchsia-500 via-purple-600/90 to-indigo-950", // Optional per-project backdrop
         projNameColor: "text-fuchsia-300",
@@ -389,6 +377,8 @@ export const portfolioData = {
         "Linux / WSL",
         "Postman",
         "LangChain",
+        "Ollama",
+        "LM Studio",
       ],
     },
     projectsHeader: {
@@ -484,7 +474,7 @@ export const portfolioData = {
         id: 20,
         title: "Wie steht es um die Schulbildung in Deutschland?",
         description:
-          "Datenanalyse zur Leistungsentwicklung deutscher Schüler: Internationaler OECD-Benchmark und föderale Heterogenität im interaktiven Dashboard.",
+          "Datenanalyse zur Leistungsentwicklung deutscher Schüler: Pisa-Studien und Bundesländervergleich.",
         tags: ["Tableau", "Data Analysis", "ETL", "Benchmarking"],
         outcomes: [
           "Integration und Bereinigung von Primärdaten aus PISA- und IQB-Studien",
@@ -495,31 +485,17 @@ export const portfolioData = {
         liveUrl:
           "https://public.tableau.com/views/Schulbildung_in_Deutschland/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
         images: [
-          "/images/image1.png", // Primary (back-left) screenshot
-          "/images/image2.png", // Secondary (front-right overlapping) screenshot
+          "/images/education/img1.png", // Primary (back-left) screenshot
+          "/images/education/img2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-amber-500 via-orange-600/90 to-red-950", // Optional per-project backdrop
         projNameColor: "text-amber-400",
       },
-      // {
-      //   id: 30,
-      //   title: "Wird der DAX steigen oder fallen?",
-      //   description: "Ein Time-Series Analysetool zur Entwicklung des DAX",
-      //   tags: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST API"],
-      //   outcomes: [
-      //     "Interaktives Dashboard (Entwicklung und Ursachen)",
-      //     "Ein Machine-Learning Modell für zukünftige Entwicklung.",
-      //     "Stakeholder Dokumentation aller Schritte vom Projektplan bis zur Präsentation der Ergebnisse",
-      //   ],
-      //   githubUrl:
-      //     "https://github.com/birgit2704/dax_time_series_analysis_2026",
-      //   liveUrl: "https://example.com",
-      // },
       {
         id: 40,
-        title: "Markteintrittsstrategie: Attraktivste Märkte für Bahnreisen",
+        title: "Attraktivstes Land für Bahnreisen-Startup",
         description:
-          "BI-gestützte Standort- und Marktanalyse für ein Reise-Startup zur datengetriebenen Identifikation des optimalen Zielmarktes für Bahnreisen.",
+          "BI-gestützte Standort- und Marktanalyse zur Identifikation des optimalen Zielmarktes.",
         tags: [
           "Tableau",
           "Business Intelligence",
@@ -534,8 +510,8 @@ export const portfolioData = {
         liveUrl:
           "https://public.tableau.com/app/profile/birgit.bartenschlager/vizzes",
         images: [
-          "/images/image1.png", // Primary (back-left) screenshot
-          "/images/image2.png", // Secondary (front-right overlapping) screenshot
+          "/images/railway/img1.png", // Primary (back-left) screenshot
+          "/images/railway/img2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-sky-500 via-blue-600/90 to-indigo-950", // Optional per-project backdrop
         projNameColor: "text-sky-300",
@@ -554,8 +530,8 @@ export const portfolioData = {
         githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://bb-sql-practice-app.netlify.app/",
         images: [
-          "/images/image1.png", // Primary (back-left) screenshot
-          "/images/image2.png", // Secondary (front-right overlapping) screenshot
+          "/images/sql/img1.png", // Primary (back-left) screenshot
+          "/images/sql/img2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-fuchsia-500 via-purple-600/90 to-indigo-950", // Optional per-project backdrop
         projNameColor: "text-fuchsia-300",

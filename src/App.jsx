@@ -476,7 +476,7 @@ export default function App() {
                 className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                   idx === activeProjectIndex
                     ? "w-8 bg-indigo-400"
-                    : "w-2 bg-slate-700 hover:bg-slate-400"
+                    : "w-2 bg-slate-700 hover:bg-slate-500"
                 }`}
               />
             ))}
@@ -520,7 +520,7 @@ export default function App() {
                       <h3 className="text-xl font-semibold text-white tracking-wide text-center">
                         {category}
                       </h3>
-                      <span className="text-xs text-slate-400 mt-2">
+                      <span className="text-xs text-slate-500 mt-2">
                         Hover or tap to view
                       </span>
                     </div>
@@ -532,7 +532,7 @@ export default function App() {
                           <span className="text-sm font-medium text-indigo-400">
                             {category}
                           </span>
-                          <span className="text-xs text-slate-400">
+                          <span className="text-xs text-slate-500">
                             {skillList.length} Skills
                           </span>
                         </div>
@@ -636,7 +636,7 @@ export default function App() {
                     target="_blank"
                     rel="noreferrer"
                     tabIndex={isCertificatesOpen ? 0 : -1}
-                    className="bg-slate-400/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-600/80 transition-all group duration-200"
+                    className="bg-slate-500/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-600/80 transition-all group duration-200"
                   >
                     <div className="flex items-start gap-4">
                       {cert.image ? (
@@ -657,12 +657,12 @@ export default function App() {
                         </h3>
                         <p className="text-sm text-slate-300 mt-0.5">
                           {cert.issuer} •{" "}
-                          <span className="text-slate-400">{cert.date}</span>
+                          <span className="text-slate-500">{cert.date}</span>
                         </p>
                       </div>
                     </div>
 
-                    <span className="p-2 text-slate-400 group-hover:text-white transition-colors shrink-0">
+                    <span className="p-2 text-slate-500 group-hover:text-white transition-colors shrink-0">
                       <ExternalLink className="w-5 h-5" />
                     </span>
                   </a>
@@ -701,7 +701,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-800/80 py-8 bg-slate-950">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
             © {new Date().getFullYear()} {personalInfo.name}. All rights
             reserved.
