@@ -16,7 +16,8 @@ export const portfolioData = {
       badge: "Available for new projects & roles",
       heroHeadline: "Intelligent apps &",
       heroSubline: "data-driven solutions",
-      bio: "Data Analyst with a cross-functional background in application development, Finance, Controlling, HR, and Sales. I use Python, machine learning, and statistical methods to answer business-critical questions and automate analytical workflows.",
+      bio1: "Your company has mountains of data, yet you’re still making decisions blindly? I translate complex data into clear, actionable recommendations that directly save you time and money. Without the confusing jargon, spreadsheet chaos, or months of waiting.",
+      bio2: "I am a Data Analyst with a cross-functional background in Software Development, Finance, Controlling, HR, and Sales. With Python, machine learning, and statistical methods I answer business-critical questions and automate analytical workflows.",
       email: "birgit.bartenschlager@web.de",
       github: "https://github.com/birgit2704",
       linkedin: "https://www.linkedin.com/in/birgit-bartenschlager",
@@ -25,7 +26,7 @@ export const portfolioData = {
     },
     skillsHeader: {
       title: "Technical Skills",
-      subtitle: "Tools, languages, and technical competencies.",
+      subtitle: "Tools, languages, and technical competencies",
     },
     skills: {
       "Software Development": [
@@ -57,7 +58,7 @@ export const portfolioData = {
         "Tableau",
         "PowerBI",
       ],
-      "Tools & Infrastructure": [
+      "Tools, Infrastructure & AI": [
         "Git & GitHub",
         "Docker",
         "VS Code",
@@ -65,11 +66,12 @@ export const portfolioData = {
         "Vite",
         "Linux / WSL",
         "Postman",
+        "LangChain",
       ],
     },
     projectsHeader: {
       title: "Featured Projects",
-      subtitle: "A selection of recent analytics work",
+      subtitle: "A selection of recent analytics and data science work",
     },
     projects: [
       {
@@ -240,13 +242,15 @@ export const portfolioData = {
     contact: {
       title: "Let's Connect",
       subtitle:
-        "Interested in collaborating, discussing data analyst/engineering roles, or reviewing code? Reach out directly via email or LinkedIn.",
+        "Interested in collaborating, discussing data  or data science roles? Reach out directly via email or LinkedIn.",
       button: "Say Hello",
     },
     certificatesHeader: {
       title: "Certificates & Credentials",
       subtitle:
-        "A selection of certificates (full list on  LinkedIn, badges on Credly)",
+        "Releveant AI, analysis and data science certificates (more on LinkedIn, badges on Credly)",
+      show: "Show certificates",
+      hide: "Hide certificates",
     },
     certificates: [
       {
@@ -270,7 +274,7 @@ export const portfolioData = {
       {
         id: 3,
         title: "Google AI Professional Certificate",
-        issuer: "Meta / Coursera",
+        issuer: "Google / Coursera",
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/TU5A3241P3OS",
@@ -287,7 +291,7 @@ export const portfolioData = {
       {
         id: 5,
         title: "Mathematics for Data Science & Machine Learning",
-        issuer: "Meta / Coursera",
+        issuer: "DeepLearning.AI / Coursera",
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/I9Y87MGSSDYV",
@@ -343,7 +347,7 @@ export const portfolioData = {
         "https://www.credly.com/users/birgit-bartenschlager/badges/credly",
     },
     skillsHeader: {
-      title: "Skills",
+      title: "Technische Skills",
       subtitle: "Werkzeuge, Programmiersprachen und technische Kompetenzen",
     },
     skills: {
@@ -538,14 +542,14 @@ export const portfolioData = {
       },
       {
         id: 50,
-        title: "SQL-Lernplattform für Entwickler & Analysten",
+        title: "SQL-Lernplattform für Studenten, Entwickler & Analysten",
         description:
-          "Interaktive Applikation zum vertiefenden Üben von SQL-Abfragen mit direkter Ausführung und Unterstützung.",
+          "Interaktive App zum vertiefenden Üben von SQL-Abfragen mit direkter Ausführung und Unterstützung.",
         tags: ["SQLite", "Google AI Studio", "EdTech"],
         outcomes: [
           "Strukturierte Challenge-Sammlung mit 36 Aufgaben in drei Schwierigkeitsstufen",
-          "Hilfestellungen (Hints) zur gezielten Unterstützung beim Finden der Lösung",
-          "Integrierte Schema- und Tabellenansichten für ein intuitives Verständnis des Datenmodells",
+          "Hilfe zur gezielten Unterstützung beim Finden der Lösung",
+          "Integrierte Schema- und Tabellenansichten für ein intuitives Verständnis der Daten",
         ],
         githubUrl: "https://github.com/birgit2704/practice_sql_app_2026",
         liveUrl: "https://bb-sql-practice-app.netlify.app/",
@@ -593,7 +597,7 @@ export const portfolioData = {
       {
         id: 3,
         title: "Google AI Professional Certificate",
-        issuer: "Meta / Coursera",
+        issuer: "Google / Coursera",
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/TU5A3241P3OS",
@@ -610,7 +614,7 @@ export const portfolioData = {
       {
         id: 5,
         title: "Mathematics for Data Science & Machine Learning",
-        issuer: "Meta / Coursera",
+        issuer: "DeepLearning.AI / Coursera",
         date: "2026",
         credentialUrl:
           "https://www.coursera.org/account/accomplishments/specialization/I9Y87MGSSDYV",

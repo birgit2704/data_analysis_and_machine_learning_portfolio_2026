@@ -124,7 +124,7 @@ export default function App() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm text-slate-400 hover:text-indigo-400 transition-colors font-medium"
+                  className="text-sm text-slate-300 hover:text-indigo-400 transition-colors font-medium"
                 >
                   {link.name}
                 </a>
@@ -164,7 +164,7 @@ export default function App() {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-400 hover:text-white"
+              className="p-2 text-slate-300 hover:text-white"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? (
@@ -221,7 +221,7 @@ export default function App() {
 
               {/* Bio Paragraph: fades and slides up as the photo finishes spinning (delay-1700) */}
               <p
-                className={`text-lg text-slate-400 max-w-2xl leading-relaxed ${
+                className={`text-lg text-slate-300 max-w-2xl leading-relaxed ${
                   isTypingDone
                     ? "opacity-100 translate-y-0 transition-all duration-700 delay-1700 ease-out"
                     : "opacity-0 translate-y-4"
@@ -230,7 +230,7 @@ export default function App() {
                 {personalInfo.bio1}
               </p>
               <p
-                className={`text-lg text-slate-400 max-w-2xl leading-relaxed ${
+                className={`text-lg text-slate-300 max-w-2xl leading-relaxed ${
                   isTypingDone
                     ? "opacity-100 translate-y-0 transition-all duration-700 delay-1700 ease-out"
                     : "opacity-0 translate-y-4"
@@ -258,7 +258,7 @@ export default function App() {
                     href={personalInfo.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all"
+                    className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all"
                   >
                     <GithubIcon className="w-5 h-5" />
                   </a>
@@ -266,13 +266,13 @@ export default function App() {
                     href={personalInfo.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all"
+                    className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all"
                   >
                     <LinkedinIcon className="w-5 h-5" />
                   </a>
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all"
+                    className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all"
                   >
                     <Mail className="w-5 h-5" />
                   </a>
@@ -308,12 +308,12 @@ export default function App() {
               <h2 className="text-3xl font-bold tracking-tight text-white">
                 {projectsHeader.title}
               </h2>
-              <p className="text-slate-400">{projectsHeader.subtitle}</p>
+              <p className="text-slate-300">{projectsHeader.subtitle}</p>
             </div>
 
             {/* Navigation Arrows & Slide Counter */}
             <div className="flex items-center gap-3 self-start sm:self-auto">
-              <span className="text-sm font-mono text-slate-400 mr-1">
+              <span className="text-sm font-mono text-slate-300 mr-1">
                 {String(activeProjectIndex + 1).padStart(2, "0")} /{" "}
                 {String(projects.length).padStart(2, "0")}
               </span>
@@ -352,7 +352,7 @@ export default function App() {
                         href={currentProject.githubUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-slate-400 hover:text-white p-1 transition-colors"
+                        className="text-slate-300 hover:text-white p-1 transition-colors"
                       >
                         <GithubIcon className="w-6 h-6" />
                       </a>
@@ -362,7 +362,7 @@ export default function App() {
                         href={currentProject.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-slate-400 hover:text-white p-1 transition-colors"
+                        className="text-slate-300 hover:text-white p-1 transition-colors"
                       >
                         <ExternalLink className="w-5 h-5" />
                       </a>
@@ -376,7 +376,7 @@ export default function App() {
                   {currentProject.title}
                 </h3>
 
-                <p className="text-base text-slate-400 mb-5 leading-relaxed">
+                <p className="text-base text-slate-300 mb-5 leading-relaxed">
                   {currentProject.description}
                 </p>
 
@@ -476,7 +476,7 @@ export default function App() {
                 className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                   idx === activeProjectIndex
                     ? "w-8 bg-indigo-400"
-                    : "w-2 bg-slate-700 hover:bg-slate-500"
+                    : "w-2 bg-slate-700 hover:bg-slate-400"
                 }`}
               />
             ))}
@@ -489,7 +489,7 @@ export default function App() {
             <h2 className="text-3xl font-bold tracking-tight text-white">
               {skillsHeader.title}
             </h2>
-            <p className="text-slate-400">{skillsHeader.subtitle}</p>
+            <p className="text-slate-300">{skillsHeader.subtitle}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -520,7 +520,7 @@ export default function App() {
                       <h3 className="text-xl font-semibold text-white tracking-wide text-center">
                         {category}
                       </h3>
-                      <span className="text-xs text-slate-500 mt-2">
+                      <span className="text-xs text-slate-400 mt-2">
                         Hover or tap to view
                       </span>
                     </div>
@@ -532,8 +532,8 @@ export default function App() {
                           <span className="text-sm font-medium text-indigo-400">
                             {category}
                           </span>
-                          <span className="text-xs text-slate-500">
-                            {skillList.length} {skillsHeader.title}
+                          <span className="text-xs text-slate-400">
+                            {skillList.length} Skills
                           </span>
                         </div>
 
@@ -567,7 +567,7 @@ export default function App() {
               <h2 className="text-3xl font-bold tracking-tight text-white">
                 {certificatesHeader.title}
               </h2>
-              <p className="text-slate-400">{certificatesHeader.subtitle}</p>
+              <p className="text-slate-300">{certificatesHeader.subtitle}</p>
             </div>
 
             <div className="flex items-center gap-3">
@@ -613,7 +613,7 @@ export default function App() {
             </div>
 
             <ChevronDown
-              className={`w-5 h-5 text-slate-400 group-hover:text-white transition-transform duration-300 ${
+              className={`w-5 h-5 text-slate-300 group-hover:text-white transition-transform duration-300 ${
                 isCertificatesOpen ? "rotate-180" : ""
               }`}
             />
@@ -636,7 +636,7 @@ export default function App() {
                     target="_blank"
                     rel="noreferrer"
                     tabIndex={isCertificatesOpen ? 0 : -1}
-                    className="bg-slate-500/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-600/80 transition-all group duration-200"
+                    className="bg-slate-400/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-600/80 transition-all group duration-200"
                   >
                     <div className="flex items-start gap-4">
                       {cert.image ? (
@@ -655,14 +655,14 @@ export default function App() {
                         <h3 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
                           {cert.title}
                         </h3>
-                        <p className="text-sm text-slate-400 mt-0.5">
+                        <p className="text-sm text-slate-300 mt-0.5">
                           {cert.issuer} •{" "}
-                          <span className="text-slate-500">{cert.date}</span>
+                          <span className="text-slate-400">{cert.date}</span>
                         </p>
                       </div>
                     </div>
 
-                    <span className="p-2 text-slate-500 group-hover:text-white transition-colors shrink-0">
+                    <span className="p-2 text-slate-400 group-hover:text-white transition-colors shrink-0">
                       <ExternalLink className="w-5 h-5" />
                     </span>
                   </a>
@@ -678,7 +678,7 @@ export default function App() {
             <h2 className="text-3xl font-bold tracking-tight text-white">
               {contact.title}
             </h2>
-            <p className="text-slate-400 leading-relaxed">{contact.subtitle}</p>
+            <p className="text-slate-300 leading-relaxed">{contact.subtitle}</p>
             <div className="flex gap-6">
               <a
                 href={`mailto:${personalInfo.email}`}
@@ -701,7 +701,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-800/80 py-8 bg-slate-950">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>
             © {new Date().getFullYear()} {personalInfo.name}. All rights
             reserved.
