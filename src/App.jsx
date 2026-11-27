@@ -504,7 +504,7 @@ export default function App() {
               return (
                 <div
                   key={category}
-                  onClick={() => toggleCard(category)}
+                  onTouchMoveCapture={() => toggleCard(category)}
                   className="group h-76 cursor-pointer [perspective:1000px]"
                 >
                   <div
@@ -526,13 +526,13 @@ export default function App() {
                     </div>
 
                     {/* BACK SIDE */}
-                    <div className="absolute inset-0 flex flex-col justify-between bg-slate-700/90 border border-indigo-500/40 rounded-xl p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                    <div className="absolute inset-0 flex flex-col justify-between bg-indigo-800 border border-indigo-500/40 rounded-xl p-6 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                       <div>
                         <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/80">
-                          <span className="text-sm font-medium text-indigo-400">
+                          <span className="text-sm font-medium text-slate-200">
                             {category}
                           </span>
-                          <span className="text-xs text-slate-500">
+                          <span className="text-xs text-slate-300">
                             {skillList.length} Skills
                           </span>
                         </div>
@@ -636,7 +636,7 @@ export default function App() {
                     target="_blank"
                     rel="noreferrer"
                     tabIndex={isCertificatesOpen ? 0 : -1}
-                    className="bg-slate-500/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-600/80 transition-all group duration-200"
+                    className="bg-slate-700/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-600/80 transition-all group duration-200"
                   >
                     <div className="flex items-start gap-4">
                       {cert.image ? (
