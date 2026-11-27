@@ -8,14 +8,14 @@ export const portfolioData = {
       skills: "Skills",
       certificates: "Certificates",
       contact: "Contact",
-      touch: "Email me",
+      touch: "Email",
     },
     personalInfo: {
       name: "Birgit Bartenschlager",
       title: "Software Developer & Data Analyst",
       badge: "Available for new projects & roles",
       heroHeadline: "Intelligent apps &",
-      heroSubline: "data-driven\n solutions",
+      heroSubline: "data-driven solutions",
       bio: "Data Analyst with a cross-functional background in application development, Finance, Controlling, HR, and Sales. I use Python, machine learning, and statistical methods to answer business-critical questions and automate analytical workflows.",
       email: "birgit.bartenschlager@web.de",
       github: "https://github.com/birgit2704",
@@ -334,8 +334,8 @@ export const portfolioData = {
       badge: "Offen für neue Projekte & Positionen",
       heroHeadline: "Intelligente Apps &",
       heroSubline: "Daten-basierte Lösungen",
-      bio: "Ihr Unternehmen hat massenhaft Daten, trotzdem entscheiden Sie blind? Ich übersetze komplexe Daten in klare Handlungsempfehlungen, die direkt Zeit und Geld sparen. Ohne umständliches Fachjargon, Tabellen-Chaos oder monatelanges Warten.",
-      // bio: "Datenanalystin mit fachübergreifendem Hintergrund in Anwendungsentwicklung, Finanzen, Controlling, HR und Vertrieb. Ich nutze Python, Machine Learning und statistische Methoden, um geschäftsrelevante Fragen zu beantworten und Analysen zu automatisieren.",
+      bio1: "Ihr Unternehmen hat massenhaft Daten, trotzdem entscheiden Sie blind? Ich übersetze komplexe Daten in klare Handlungsempfehlungen, die direkt Zeit und Geld sparen. Ohne umständliches Fachjargon, Tabellen-Chaos oder monatelanges Warten.",
+      bio2: "Ich bin Datenanalystin mit fachübergreifendem Hintergrund in Software-Entwicklung, Finanzen, Controlling, HR und Vertrieb. Mit Python, Machine Learning und statistischen Methoden beantworte ich geschäftsrelevante Fragen und automatisiere Analysen.",
       email: "birgit.bartenschlager@web.de",
       github: "https://github.com/birgit2704",
       linkedin: "https://www.linkedin.com/in/birgit-bartenschlager",
@@ -343,8 +343,8 @@ export const portfolioData = {
         "https://www.credly.com/users/birgit-bartenschlager/badges/credly",
     },
     skillsHeader: {
-      title: "Technische Fähigkeiten",
-      subtitle: "Werkzeuge, Programmiersprachen und technische Kompetenzen.",
+      title: "Skills",
+      subtitle: "Werkzeuge, Programmiersprachen und technische Kompetenzen",
     },
     skills: {
       Softwareentwicklung: [
@@ -376,7 +376,7 @@ export const portfolioData = {
         "Tableau",
         "PowerBI",
       ],
-      "Tools & Infrastruktur": [
+      "Tools, Infrastruktur & KI": [
         "Git & GitHub",
         "Docker",
         "VS Code",
@@ -384,11 +384,12 @@ export const portfolioData = {
         "Vite",
         "Linux / WSL",
         "Postman",
+        "LangChain",
       ],
     },
     projectsHeader: {
-      title: "Ausgewählte Projekte",
-      subtitle: "Eine Auswahl aktueller Arbeiten aus den Bereich Datenanalyse.",
+      title: "Projekte",
+      subtitle: "Eine Auswahl aus den Bereichen Datenanalyse und Data Science",
     },
     projects: [
       {
@@ -557,15 +558,17 @@ export const portfolioData = {
       },
     ],
     contact: {
-      title: "Lass uns vernetzen",
+      title: "Kontakt",
       subtitle:
-        "Interesse an einer Zusammenarbeit, Austausch über Data Analyst/Engineering Positionen oder Code-Reviews? Schreib mir direkt per E-Mail oder LinkedIn.",
+        "Interesse an einer Zusammenarbeit, Austausch über Data Analyst oder Data Science Positionen? Schreiben Sie mir direkt per E-Mail oder LinkedIn.",
       button: "Nachricht senden",
     },
     certificatesHeader: {
       title: "Zertifikate & Nachweise",
       subtitle:
-        "Eine Auswahl meiner Zertifikate (komplette Liste auf LinkedIn, Badges auf Credly)",
+        "Relevante KI-, Analyse- und Data Science Zertifikate (mehr auf LinkedIn, Badges auf Credly)",
+      show: "Zertifikate anzeigen",
+      hide: "Zertifikate einklappen",
     },
     certificates: [
       {

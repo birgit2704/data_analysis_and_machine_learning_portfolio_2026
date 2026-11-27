@@ -114,7 +114,7 @@ export default function App() {
             className="flex items-center gap-2 font-bold text-lg text-indigo-400 hover:text-indigo-300 transition-colors"
           >
             <Code2 className="w-6 h-6" />
-            <span>ML_Portfolio</span>
+            <span>BB-ML</span>
           </a>
 
           {/* Desktop Navigation & Language Switcher */}
@@ -227,9 +227,17 @@ export default function App() {
                     : "opacity-0 translate-y-4"
                 }`}
               >
-                {personalInfo.bio}
+                {personalInfo.bio1}
               </p>
-
+              <p
+                className={`text-lg text-slate-400 max-w-2xl leading-relaxed ${
+                  isTypingDone
+                    ? "opacity-100 translate-y-0 transition-all duration-700 delay-1700 ease-out"
+                    : "opacity-0 translate-y-4"
+                }`}
+              >
+                {personalInfo.bio2}
+              </p>
               {/* CTA & Social Buttons: follows slightly behind the bio (delay-2000) */}
               <div
                 className={`flex flex-wrap items-center gap-4 pt-4 ${
@@ -279,8 +287,8 @@ export default function App() {
                   isTypingDone ? "animate-spin-grow" : "scale-0 opacity-0"
                 }`}
               >
-                <div className="absolute -inset-1 bg-linear-to-r from-indigo-500 to-emerald-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
-                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-900 border-4 border-slate-800 overflow-hidden shadow-2xl flex items-center justify-center">
+                <div className="absolute -inset-1 bg-linear-to-r from-indigo-500 to-emerald-500 rounded-full blur opacity-30 group-hover:opacity-70 transition duration-1000"></div>
+                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-900 border-2 border-slate-800 overflow-hidden shadow-2xl flex items-center justify-center">
                   <img
                     src="/Birgit.jpg"
                     alt={personalInfo.name}
@@ -525,7 +533,7 @@ export default function App() {
                             {category}
                           </span>
                           <span className="text-xs text-slate-500">
-                            {skillList.length} skills
+                            {skillList.length} {skillsHeader.title}
                           </span>
                         </div>
 
@@ -588,14 +596,16 @@ export default function App() {
             type="button"
             onClick={() => setIsCertificatesOpen((prev) => !prev)}
             aria-expanded={isCertificatesOpen}
-            className="w-full flex items-center justify-between px-6 py-4 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-indigo-500/50 hover:bg-slate-900 transition-all group cursor-pointer"
+            className="w-full flex items-center justify-between px-6 py-4 rounded-xl bg-slate-700/40 border border-slate-800/80 hover:border-indigo-500/50 hover:bg-slate-900 transition-all group cursor-pointer"
           >
             <div className="flex items-center gap-3">
               <span className="p-2 rounded-lg bg-indigo-950/80 border border-indigo-800/40 text-indigo-400">
                 <Award className="w-5 h-5" />
               </span>
               <span className="text-base font-semibold text-white group-hover:text-indigo-300 transition-colors">
-                {isCertificatesOpen ? "Hide Certificates" : "View Certificates"}
+                {isCertificatesOpen
+                  ? certificatesHeader.hide
+                  : certificatesHeader.show}
               </span>
               <span className="px-2.5 py-0.5 text-xs font-medium rounded-full bg-slate-800 text-slate-300 border border-slate-700/60">
                 {certificates.length}
@@ -626,7 +636,7 @@ export default function App() {
                     target="_blank"
                     rel="noreferrer"
                     tabIndex={isCertificatesOpen ? 0 : -1}
-                    className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-900/80 transition-all group duration-200"
+                    className="bg-slate-500/40 border border-slate-800/80 rounded-xl p-6 flex items-center justify-between hover:border-indigo-500/50 hover:bg-slate-600/80 transition-all group duration-200"
                   >
                     <div className="flex items-start gap-4">
                       {cert.image ? (
@@ -669,14 +679,23 @@ export default function App() {
               {contact.title}
             </h2>
             <p className="text-slate-400 leading-relaxed">{contact.subtitle}</p>
-
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="mt-2 px-8 py-4 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-all flex items-center gap-3 shadow-xl shadow-indigo-600/30 text-lg"
-            >
-              <Mail className="w-5 h-5" />
-              {contact.button}
-            </a>
+            <div className="flex gap-6">
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-all flex items-center gap-2 shadow-lg shadow-indigo-600/25"
+              >
+                <Mail className="w-5 h-5" />
+                {contact.button}
+              </a>
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="p-3 rounded-lg bg-indigo-600 border border-slate-800 text-white hover:text-white  hover:bg-indigo-500 transition-all"
+              >
+                <LinkedinIcon className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </section>
       </main>
