@@ -504,7 +504,7 @@ export default function App() {
               return (
                 <div
                   key={category}
-                  onTouchMoveCapture={() => toggleCard(category)}
+                  onTouch={() => toggleCard(category)}
                   className="group h-76 cursor-pointer [perspective:1000px]"
                 >
                   <div
