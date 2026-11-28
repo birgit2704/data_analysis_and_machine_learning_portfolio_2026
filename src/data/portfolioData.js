@@ -120,21 +120,20 @@ export const portfolioData = {
       },
       {
         id: 12,
-        title: "Customer Segmentation",
+        title: "Who are our customers?",
         description:
-          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
-        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
+          "Customer segmentation project in close alignment with marketing needs to group customers by behavior and demographics.",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Streamlit"],
         outcomes: [
-          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
-          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
-          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+          "Cleaned and preprocessed customer data to uncover key behavioral patterns",
+          "A K-Means clustering model with Scikit-Learn to segment customers into distinct target groups",
+          "A Streamlit web app enabling marketing teams to classify individual customers in real time",
         ],
-        githubUrl:
-          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
-        liveUrl: "https://example.com",
+        githubUrl: "https://github.com/birgit2704/customer_segmentation",
+        liveUrl: "https://bb-customer-segmentation.streamlit.app/",
         images: [
-          "/images/image1.png", // Primary (back-left) screenshot
-          "/images/image2.png", // Secondary (front-right overlapping) screenshot
+          "/images/segmentation/img1.png", // Primary (back-left) screenshot
+          "/images/segmentation/img2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-emerald-500 via-teal-600/90 to-teal-950", // Optional per-project backdrop
         projNameColor: "text-emerald-300",
@@ -430,21 +429,20 @@ export const portfolioData = {
       },
       {
         id: 12,
-        title: "Customer Segmentation",
+        title: "Wer sind unsere Kunden?",
         description:
-          "End-to-end data analysis and machine learning project identifying key churn drivers for a video streaming service.",
-        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Tableau"],
+          "Kundensegmentierungsprojekt in enger Abstimmung mit den Anforderungen des Marketings, um Kunden nach Verhalten und Demografie zu gruppieren",
+        tags: ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Streamlit"],
         outcomes: [
-          "Interactive Tableau dashboard visualizing churn trends, user engagement, and key risk factors",
-          "Predictive machine learning model to detect at-risk subscribers prior to cancellation",
-          "Financial loss assessment (MRR impact) and prioritized high-value retention list",
+          "Bereinigte und aufbereitete Kundendaten und Exploration, um zentrale Verhaltensmuster aufzudecken",
+          "K-Means-Clustering-Modell mit Scikit-Learn, das Kunden in klar abgegrenzte Segmente einteilt",
+          "Eine Streamlit-Web-App, mit der Marketingteams einzelne Kunden in Echtzeit einordnen können",
         ],
-        githubUrl:
-          "https://github.com/birgit2704/churn_prediciton_for_streaming_company_2026",
-        liveUrl: "https://example.com",
+        githubUrl: "https://github.com/birgit2704/customer_segmentation",
+        liveUrl: "https://bb-customer-segmentation.streamlit.app/",
         images: [
-          "/images/image1.png", // Primary (back-left) screenshot
-          "/images/image2.png", // Secondary (front-right overlapping) screenshot
+          "/images/segmentation/img1.png", // Primary (back-left) screenshot
+          "/images/segmentation/img2.png", // Secondary (front-right overlapping) screenshot
         ],
         accentBg: "from-emerald-500 via-teal-600/90 to-teal-950", // Optional per-project backdrop
         projNameColor: "text-emerald-300",
